@@ -1198,6 +1198,7 @@ li.folder.collapsed > .folder-header {
   flex-basis: 60%;
   font-size: 20px;
   font-weight: bold;
+  text-align: left;
 }
 .whfortyrp .stats .skills .skill .total {
   font-size: 12px;
@@ -2017,7 +2018,13 @@ li.folder.collapsed > .folder-header {
 }
 .whfortyrp .notes-tab .notes-editor {
   margin-top: 2px;
-  height: 476px;
+  height: 550px;
+}
+.whfortyrp .notes-tab .notes-editor .editor-content {
+  margin-left: 4px;
+  margin-right: 4px;
+  text-align: left;
+  width: 98%;
 }
 .whfortyrp .notes-tab .information {
   display: flex;
