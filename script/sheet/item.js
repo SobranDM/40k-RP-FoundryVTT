@@ -6,6 +6,8 @@ export class WHFortyRPItemSheet extends ItemSheet {
 
   async getData() {
     let data = super.getData();
+    data.system = data.data.system;
+    data.enrichment = {};
     data.enrichment = await this._handleEnrichment();
     return data;
   }
@@ -13,7 +15,7 @@ export class WHFortyRPItemSheet extends ItemSheet {
   async _handleEnrichment() {
     let enrichment = {};
     enrichment["system.description"] = await TextEditor.enrichHTML(this.item.system.description, { async: true });
-
+    console.log(enrichment);
     return expandObject(enrichment);
   }
 
