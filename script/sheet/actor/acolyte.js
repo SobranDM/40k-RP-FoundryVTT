@@ -1,11 +1,11 @@
-import { DarkHeresySheet } from "./actor.js";
+import { WHFortyRPSheet } from "./actor.js";
 
-export class AcolyteSheet extends DarkHeresySheet {
+export class AcolyteSheet extends WHFortyRPSheet {
 
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["dark-heresy", "sheet", "actor"],
-      template: "systems/dark-heresy/template/sheet/actor/acolyte.html",
+      classes: ["whfortyrp", "sheet", "actor"],
+      template: "systems/whfortyrp/template/sheet/actor/acolyte.html",
       width: 700,
       height: 881,
       resizable: false,

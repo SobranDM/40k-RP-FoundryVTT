@@ -1,10 +1,10 @@
-import { DarkHeresyItemSheet } from "./item.js";
+import { WHFortyRPItemSheet } from "./item.js";
 
-export class ToolSheet extends DarkHeresyItemSheet {
+export class ToolSheet extends WHFortyRPItemSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["dark-heresy", "sheet", "tool"],
-      template: "systems/dark-heresy/template/sheet/tool.html",
+      classes: ["whfortyrp", "sheet", "tool"],
+      template: "systems/whfortyrp/template/sheet/tool.html",
       width: 500,
       height: 369,
       resizable: false,

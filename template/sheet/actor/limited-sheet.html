@@ -3,7 +3,7 @@
     <div class="header border">
       <div class="flex row">
         <div class="avatar">
-          <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+          <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
         </div>
         <div class="flex column grow">
           <div class="name header-row">
@@ -14,13 +14,13 @@
       </div>
     </div>
 
-<!--    <div class="flex wrap">-->
-      <div class="flex wrap notes-editor border">
-        <h1>{{localize "TITLE.NOTES"}}</h1>
-        <div class="notes-editor-content">
-          {{editor enrichment.system.bio.notes target="system.bio.notes" engine="prosemirror" button=true owner=owner
-          editable=editable}}
-        </div>
+    <!--    <div class="flex wrap">-->
+    <div class="flex wrap notes-editor border">
+      <h1>{{localize "TITLE.NOTES"}}</h1>
+      <div class="notes-editor-content">
+        {{editor enrichedNotes target="system.bio.notes" engine="prosemirror" button=true owner=owner
+        editable=editable async=true}}
       </div>
+    </div>
   </div>
 </form>

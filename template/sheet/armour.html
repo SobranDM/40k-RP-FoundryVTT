@@ -27,27 +27,29 @@
                         <label>{{localize "ARMOUR.TYPE"}}</label>
                         <select name="system.type">
                             {{#select system.type}}
-                                <option value="basic">{{localize "ARMOUR_TYPE.BASIC"}}</option>
-                                <option value="flak">{{localize "ARMOUR_TYPE.FLAK"}}</option>
-                                <option value="mesh">{{localize "ARMOUR_TYPE.MESH"}}</option>
-                                <option value="carapace">{{localize "ARMOUR_TYPE.CARAPACE"}}</option>
-                                <option value="power">{{localize "ARMOUR_TYPE.POWER"}}</option>
+                            <option value="basic">{{localize "ARMOUR_TYPE.BASIC"}}</option>
+                            <option value="flak">{{localize "ARMOUR_TYPE.FLAK"}}</option>
+                            <option value="mesh">{{localize "ARMOUR_TYPE.MESH"}}</option>
+                            <option value="carapace">{{localize "ARMOUR_TYPE.CARAPACE"}}</option>
+                            <option value="power">{{localize "ARMOUR_TYPE.POWER"}}</option>
                             {{/select}}
                         </select>
-                    </div> 
+                    </div>
                     <div class="stat part">
-					              <label>{{localize "ARMOUR.IS_ADDITIVE"}}</label>
-						            <input name="system.isAdditive" type="checkbox" {{checked system.isAdditive}} />
-                    </div>					
+                        <label>{{localize "ARMOUR.IS_ADDITIVE"}}</label>
+                        <input name="system.isAdditive" type="checkbox" {{checked system.isAdditive}} />
+                    </div>
                     <div class="stat max-agility">
                         <label>{{localize "ARMOUR.MAX_AGILITY"}}</label>
-                        <input name="system.maxAgility" type="number" value="{{system.maxAgility}}" data-dtype="Number" />
+                        <input name="system.maxAgility" type="number" value="{{system.maxAgility}}"
+                            data-dtype="Number" />
                     </div>
                 </div>
                 <div class="stats-row" style="justify-content: space-evenly">
                     <div class="stat part">
                         <label>{{localize "ARMOUR.LEFT_ARM"}}</label>
-                        <input name="system.part.leftArm" type="number" value="{{system.part.leftArm}}" data-dtype="Number" />
+                        <input name="system.part.leftArm" type="number" value="{{system.part.leftArm}}"
+                            data-dtype="Number" />
                     </div>
                     <div class="stat part">
                         <label>{{localize "ARMOUR.HEAD"}}</label>
@@ -55,13 +57,15 @@
                     </div>
                     <div class="stat part">
                         <label>{{localize "ARMOUR.RIGHT_ARM"}}</label>
-                        <input name="system.part.rightArm" type="number" value="{{system.part.rightArm}}" data-dtype="Number" />
+                        <input name="system.part.rightArm" type="number" value="{{system.part.rightArm}}"
+                            data-dtype="Number" />
                     </div>
                 </div>
                 <div class="stats-row" style="justify-content: space-evenly">
                     <div class="stat part">
                         <label>{{localize "ARMOUR.LEFT_LEG"}}</label>
-                        <input name="system.part.leftLeg" type="number" value="{{system.part.leftLeg}}" data-dtype="Number" />
+                        <input name="system.part.leftLeg" type="number" value="{{system.part.leftLeg}}"
+                            data-dtype="Number" />
                     </div>
                     <div class="stat part">
                         <label>{{localize "ARMOUR.BODY"}}</label>
@@ -69,7 +73,8 @@
                     </div>
                     <div class="stat part">
                         <label>{{localize "ARMOUR.RIGHT_LEG"}}</label>
-                        <input name="system.part.rightLeg" type="number" value="{{system.part.rightLeg}}" data-dtype="Number" />
+                        <input name="system.part.rightLeg" type="number" value="{{system.part.rightLeg}}"
+                            data-dtype="Number" />
                     </div>
                 </div>
                 <div class="stats-row">
@@ -77,10 +82,10 @@
                         <label>{{localize "ARMOUR.CRAFTSMANSHIP"}}</label>
                         <select name="system.craftsmanship">
                             {{#select system.craftsmanship}}
-                                <option value="poor">{{localize "CRAFTSMANSHIP.POOR"}}</option>
-                                <option value="common">{{localize "CRAFTSMANSHIP.COMMON"}}</option>
-                                <option value="good">{{localize "CRAFTSMANSHIP.GOOD"}}</option>
-                                <option value="best">{{localize "CRAFTSMANSHIP.BEST"}}</option>
+                            <option value="poor">{{localize "CRAFTSMANSHIP.POOR"}}</option>
+                            <option value="common">{{localize "CRAFTSMANSHIP.COMMON"}}</option>
+                            <option value="good">{{localize "CRAFTSMANSHIP.GOOD"}}</option>
+                            <option value="best">{{localize "CRAFTSMANSHIP.BEST"}}</option>
                             {{/select}}
                         </select>
                     </div>
@@ -88,17 +93,17 @@
                         <label>{{localize "ARMOUR.AVAILABILITY"}}</label>
                         <select name="system.availability">
                             {{#select system.availability}}
-                                <option value="ubiquitous">{{localize "AVAILABILITY.UBIQUITOUS"}}</option>
-                                <option value="abundant">{{localize "AVAILABILITY.ABUNDANT"}}</option>
-                                <option value="plentiful">{{localize "AVAILABILITY.PLENTIFUL"}}</option>
-                                <option value="common">{{localize "AVAILABILITY.COMMON"}}</option>
-                                <option value="average">{{localize "AVAILABILITY.AVERAGE"}}</option>
-                                <option value="scarce">{{localize "AVAILABILITY.SCARCE"}}</option>
-                                <option value="rare">{{localize "AVAILABILITY.RARE"}}</option>
-                                <option value="very-rare">{{localize "AVAILABILITY.VERY_RARE"}}</option>
-                                <option value="extremely-rare">{{localize "AVAILABILITY.EXTREMELY_RARE"}}</option>
-                                <option value="near-unique">{{localize "AVAILABILITY.NEAR_UNIQUE"}}</option>
-                                <option value="unique">{{localize "AVAILABILITY.UNIQUE"}}</option>
+                            <option value="ubiquitous">{{localize "AVAILABILITY.UBIQUITOUS"}}</option>
+                            <option value="abundant">{{localize "AVAILABILITY.ABUNDANT"}}</option>
+                            <option value="plentiful">{{localize "AVAILABILITY.PLENTIFUL"}}</option>
+                            <option value="common">{{localize "AVAILABILITY.COMMON"}}</option>
+                            <option value="average">{{localize "AVAILABILITY.AVERAGE"}}</option>
+                            <option value="scarce">{{localize "AVAILABILITY.SCARCE"}}</option>
+                            <option value="rare">{{localize "AVAILABILITY.RARE"}}</option>
+                            <option value="very-rare">{{localize "AVAILABILITY.VERY_RARE"}}</option>
+                            <option value="extremely-rare">{{localize "AVAILABILITY.EXTREMELY_RARE"}}</option>
+                            <option value="near-unique">{{localize "AVAILABILITY.NEAR_UNIQUE"}}</option>
+                            <option value="unique">{{localize "AVAILABILITY.UNIQUE"}}</option>
                             {{/select}}
                         </select>
                     </div>
@@ -113,7 +118,8 @@
             <div class="notes-editor border">
                 <h1>{{localize "TITLE.NOTES"}}</h1>
                 <div style="height: 132px; width: 100%">
-                    {{editor enrichment.system.description target="system.description" engine="prosemirror" button=true owner=owner editable=editable}}
+                    {{editor enrichment.system.description target="system.description" engine="prosemirror" button=true
+                    owner=owner editable=editable}}
                 </div>
             </div>
         </div>

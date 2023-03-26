@@ -40,7 +40,8 @@
                 <div class="stats-row">
                     <div class="stat focus-power">
                         <label>{{localize "PSYCHIC_POWER.FOCUS_POWER"}}</label>
-                        <input name="system.focusPower.difficulty" type="number" value="{{system.focusPower.difficulty}}" data-dtype="Number" />
+                        <input name="system.focusPower.difficulty" type="number"
+                            value="{{system.focusPower.difficulty}}" data-dtype="Number" />
                         <input name="system.focusPower.test" type="text" value="{{system.focusPower.test}}" />
                     </div>
                     <div class="stat range">
@@ -58,10 +59,10 @@
                         <input name="system.damage.formula" type="text" value="{{system.damage.formula}}" />
                         <select name="system.damage.type">
                             {{#select system.damage.type}}
-                                <option value="energy">{{localize "DAMAGE_TYPE.ENERGY"}}</option>
-                                <option value="impact">{{localize "DAMAGE_TYPE.IMPACT"}}</option>
-                                <option value="rending">{{localize "DAMAGE_TYPE.RENDING"}}</option>
-                                <option value="explosive">{{localize "DAMAGE_TYPE.EXPLOSIVE"}}</option>
+                            <option value="energy">{{localize "DAMAGE_TYPE.ENERGY"}}</option>
+                            <option value="impact">{{localize "DAMAGE_TYPE.IMPACT"}}</option>
+                            <option value="rending">{{localize "DAMAGE_TYPE.RENDING"}}</option>
+                            <option value="explosive">{{localize "DAMAGE_TYPE.EXPLOSIVE"}}</option>
                             {{/select}}
                         </select>
                     </div>
@@ -73,11 +74,11 @@
                         <label>{{localize "PSYCHIC_POWER.ZONE"}}</label>
                         <select name="system.damage.zone">
                             {{#select system.damage.zone}}
-                                <option value="none">{{localize "ATTACK_TYPE.NONE"}}</option>
-                                <option value="bolt">{{localize "PSYCHIC_POWER.BOLT"}}</option>
-                                <option value="barrage">{{localize "PSYCHIC_POWER.BARRAGE"}}</option>
-                                <option value="storm">{{localize "PSYCHIC_POWER.STORM"}}</option>
-                                <option value="blast">{{localize "PSYCHIC_POWER.BLAST"}}</option>
+                            <option value="none">{{localize "ATTACK_TYPE.NONE"}}</option>
+                            <option value="bolt">{{localize "PSYCHIC_POWER.BOLT"}}</option>
+                            <option value="barrage">{{localize "PSYCHIC_POWER.BARRAGE"}}</option>
+                            <option value="storm">{{localize "PSYCHIC_POWER.STORM"}}</option>
+                            <option value="blast">{{localize "PSYCHIC_POWER.BLAST"}}</option>
                             {{/select}}
                         </select>
                     </div>
@@ -96,19 +97,12 @@
                 </div>
             </div>
         </div>
-        <div class="tab" data-group="primary" data-tab="effect">
-            <div class="notes-editor border">
-                <h1>{{localize "TITLE.EFFECT"}}</h1>
-                <div style="height: 160px; width: 100%">
-                    {{editor enrichment.system.effect target="system.effect" engine="prosemirror" button=true owner=owner editable=editable}}
-                </div>
-            </div>
-        </div>
         <div class="tab" data-group="primary" data-tab="notes">
             <div class="notes-editor border">
                 <h1>{{localize "TITLE.NOTES"}}</h1>
                 <div style="height: 160px; width: 100%">
-                    {{editor enrichment.system.description target="system.description" engine="prosemirror" button=true owner=owner editable=editable}}
+                    {{editor enrichment.system.description target="system.description" engine="prosemirror" button=true
+                    owner=owner editable=editable}}
                 </div>
             </div>
         </div>

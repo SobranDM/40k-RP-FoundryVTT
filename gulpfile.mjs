@@ -20,5 +20,5 @@ export const lint = gulp.series(javascript.lint);
 
 // Build all artifacts
 export const buildAll = gulp.parallel(
-  css.compile,
+  css.compile
 );

@@ -1,10 +1,10 @@
-import { DarkHeresyItemSheet } from "./item.js";
+import { WHFortyRPItemSheet } from "./item.js";
 
-export class WeaponModificationSheet extends DarkHeresyItemSheet {
+export class WeaponModificationSheet extends WHFortyRPItemSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["dark-heresy", "sheet", "weapon-modification"],
-      template: "systems/dark-heresy/template/sheet/weapon-modification.html",
+      classes: ["whfortyrp", "sheet", "weapon-modification"],
+      template: "systems/whfortyrp/template/sheet/weapon-modification.html",
       width: 500,
       height: 369,
       resizable: false,

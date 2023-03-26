@@ -1,62 +1,62 @@
-export default class DarkHeresyUtil {
-  
+export default class WHFortyRPUtil {
+
   static createCommonAttackRollData(actor, item) {
-      return {
-        name: item.name,      
-        attributeBoni: actor.attributeBoni,
-        ownerId: actor.id,
-        itemId: item.id,      
-        damageBonus: 0,
-        damageType: item.damageType,      
+    return {
+      name: item.name,
+      attributeBoni: actor.attributeBoni,
+      ownerId: actor.id,
+      itemId: item.id,
+      damageBonus: 0,
+      damageType: item.damageType,
     };
   }
-  
+
   static createWeaponRollData(actor, weapon) {
     let characteristic = this.getWeaponCharacteristic(actor, weapon);
     let rateOfFire;
     if (weapon.class === "melee") {
-      rateOfFire = {burst: characteristic.bonus, full: characteristic.bonus};
+      rateOfFire = { burst: characteristic.bonus, full: characteristic.bonus };
     } else {
-      rateOfFire = {burst: weapon.rateOfFire.burst, full: weapon.rateOfFire.full};
+      rateOfFire = { burst: weapon.rateOfFire.burst, full: weapon.rateOfFire.full };
     }
     let isMelee = weapon.class === "melee";
-    
+
     let rollData = this.createCommonAttackRollData(actor, weapon);
-    rollData.baseTarget= characteristic.total + weapon.attack,
-    rollData.modifier= 0,
-    rollData.isMelee= isMelee;
-    rollData.isRange= !isMelee;
-    rollData.clip= weapon.clip;
-    rollData.rateOfFire= rateOfFire;
-    rollData.damageFormula= weapon.damage + (isMelee && !weapon.damage.match(/SB/gi) ? "+SB" : "");
-    rollData.penetrationFormula= weapon.penetration;
-    rollData.weaponTraits= this.extractWeaponTraits(weapon.special);    
-    rollData.special= weapon.special;
-    rollData.psy= { value: actor.psy.rating, display: false};
+    rollData.baseTarget = characteristic.total + weapon.attack,
+      rollData.modifier = 0,
+      rollData.isMelee = isMelee;
+    rollData.isRange = !isMelee;
+    rollData.clip = weapon.clip;
+    rollData.rateOfFire = rateOfFire;
+    rollData.damageFormula = weapon.damage + (isMelee && !weapon.damage.match(/SB/gi) ? "+SB" : "");
+    rollData.penetrationFormula = weapon.penetration;
+    rollData.weaponTraits = this.extractWeaponTraits(weapon.special);
+    rollData.special = weapon.special;
+    rollData.psy = { value: actor.psy.rating, display: false };
     return rollData;
   }
-  
+
   static createPsychicRollData(actor, power) {
     let focusPowerTarget = this.getFocusPowerTarget(actor, power);
-    
-    let rollData = this.createCommonAttackRollData(actor, power); 
-    rollData.baseTarget= focusPowerTarget.total;
-    rollData.modifier= power.focusPower.difficulty;      
-    rollData.damageFormula= power.damage.formula;      
-    rollData.penetrationFormula= power.damage.penetration;
-    rollData.attackType= { name: power.damage.zone, text: "" };
-    rollData.weaponTraits= this.extractWeaponTraits(power.damage.special);
-    rollData.special= power.damage.special;
+
+    let rollData = this.createCommonAttackRollData(actor, power);
+    rollData.baseTarget = focusPowerTarget.total;
+    rollData.modifier = power.focusPower.difficulty;
+    rollData.damageFormula = power.damage.formula;
+    rollData.penetrationFormula = power.damage.penetration;
+    rollData.attackType = { name: power.damage.zone, text: "" };
+    rollData.weaponTraits = this.extractWeaponTraits(power.damage.special);
+    rollData.special = power.damage.special;
     rollData.psy = {
-        value: actor.psy.rating,
-        rating: actor.psy.rating,
-        max: this.getMaxPsyRating(actor),
-        warpConduit: false,
-        display: true
+      value: actor.psy.rating,
+      rating: actor.psy.rating,
+      max: this.getMaxPsyRating(actor),
+      warpConduit: false,
+      display: true
     };
     return rollData;
   }
-  
+
   static extractWeaponTraits(traits) {
     // These weapon traits never go above 9 or below 2
     return {
@@ -99,7 +99,7 @@ export default class DarkHeresyUtil {
       return false;
     }
   }
-  
+
   static getWeaponCharacteristic(actor, weapon) {
     if (weapon.class === "melee") {
       return actor.characteristics.weaponSkill;
@@ -118,6 +118,6 @@ export default class DarkHeresyUtil {
       return actor.characteristics.willpower;
     }
   }
-    
+
 }
 

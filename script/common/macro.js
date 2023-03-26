@@ -1,4 +1,4 @@
-import DarkHeresyUtil from "./util.js";
+import WHFortyRPUtil from "./util.js";
 import { prepareCombatRoll, preparePsychicPowerRoll } from "./dialog.js";
 
 export default class DhMacroUtil {
@@ -52,12 +52,12 @@ export default class DhMacroUtil {
   }
   
   static rollPsychicPower(actor, item) {
-    let rollData = DarkHeresyUtil.createPsychicRollData(actor, item);
+    let rollData = WHFortyRPUtil.createPsychicRollData(actor, item);
     preparePsychicPowerRoll(rollData);
   }
   
   static rollWeapon(actor, item) {
-    let rollData = DarkHeresyUtil.createWeaponRollData(actor, item);
+    let rollData = WHFortyRPUtil.createWeaponRollData(actor, item);
     prepareCombatRoll(rollData);
   }
 }

@@ -24,34 +24,17 @@
             </div>
         </div>
         <div class="information-row full">
-            <div class="divination wrapper full">
-                <label>{{localize "BIO.DIVINATION"}}</label>
-                <input name="system.bio.divination" type="text" value="{{system.bio.divination}}" />
-            </div>
-        </div>
-        <div class="information-row full">
-            <div class="quirks wrapper full">
-                <label>{{localize "BIO.QUIRKS"}}</label>
-                <input name="system.bio.quirks" type="text" value="{{system.bio.quirks}}" />
-            </div>
-        </div>
-        <div class="information-row full">
-            <div class="superstition wrapper full">
-                <label>{{localize "BIO.SUPERSTITION"}}</label>
-                <input name="system.bio.superstition" type="text" value="{{system.bio.superstition}}" />
-            </div>
-        </div>
-        <div class="information-row full">
-            <div class="momentos wrapper full">
-                <label>{{localize "BIO.MOMENTOS"}}</label>
-                <input name="system.bio.momentos" type="text" value="{{system.bio.momentos}}" />
+            <div class="warband wrapper full">
+                <label>{{localize "BIO.WARBAND"}}</label>
+                <input name="system.bio.warband" type="text" value="{{system.bio.warband}}" />
             </div>
         </div>
     </div>
     <div class="notes-editor border">
         <h1>{{localize "TITLE.NOTES"}}</h1>
         <div style="height: 442px; width: 100%">
-            {{editor enrichment.system.bio.notes target="system.bio.notes" engine="prosemirror" button=true owner=owner editable=editable}}
+            {{editor enrichment.system.bio.notes target="system.bio.notes" engine="prosemirror" button=true owner=owner
+            editable=editable}}
         </div>
     </div>
 </div>

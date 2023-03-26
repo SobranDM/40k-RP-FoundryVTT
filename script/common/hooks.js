@@ -1,5 +1,5 @@
-import { DarkHeresyActor } from "./actor.js";
-import { DarkHeresyItem } from "./item.js";
+import { WHFortyRPActor } from "./actor.js";
+import { WHFortyRPItem } from "./item.js";
 import { AcolyteSheet } from "../sheet/actor/acolyte.js";
 import { NpcSheet } from "../sheet/actor/npc.js";
 import { WeaponSheet } from "../sheet/weapon.js";
@@ -31,10 +31,10 @@ import * as chat from "./chat.js";
 
 Hooks.once("init", () => {
   CONFIG.Combat.initiative = { formula: "@initiative.base + @initiative.bonus", decimals: 0 };
-  CONFIG.Actor.documentClass = DarkHeresyActor;
-  CONFIG.Item.documentClass = DarkHeresyItem;
+  CONFIG.Actor.documentClass = WHFortyRPActor;
+  CONFIG.Item.documentClass = WHFortyRPItem;
   CONFIG.fontDefinitions["Caslon Antique"] = {editor: true, fonts: []};
-  game.darkHeresy = {
+  game.whFortyRp = {
     testInit: {
       prepareCommonRoll,
       prepareCombatRoll,
@@ -47,29 +47,29 @@ Hooks.once("init", () => {
   };
   game.macro = DhMacroUtil; 
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("dark-heresy", AcolyteSheet, { types: ["acolyte"], makeDefault: true });
-  Actors.registerSheet("dark-heresy", NpcSheet, { types: ["npc"], makeDefault: true });
+  Actors.registerSheet("whfortyrp", AcolyteSheet, { types: ["acolyte"], makeDefault: true });
+  Actors.registerSheet("whfortyrp", NpcSheet, { types: ["npc"], makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("dark-heresy", WeaponSheet, { types: ["weapon"], makeDefault: true });
-  Items.registerSheet("dark-heresy", AmmunitionSheet, { types: ["ammunition"], makeDefault: true });
-  Items.registerSheet("dark-heresy", WeaponModificationSheet, { types: ["weaponModification"], makeDefault: true });
-  Items.registerSheet("dark-heresy", ArmourSheet, { types: ["armour"], makeDefault: true });
-  Items.registerSheet("dark-heresy", ForceFieldSheet, { types: ["forceField"], makeDefault: true });
-  Items.registerSheet("dark-heresy", CyberneticSheet, { types: ["cybernetic"], makeDefault: true });
-  Items.registerSheet("dark-heresy", DrugSheet, { types: ["drug"], makeDefault: true });
-  Items.registerSheet("dark-heresy", GearSheet, { types: ["gear"], makeDefault: true });
-  Items.registerSheet("dark-heresy", ToolSheet, { types: ["tool"], makeDefault: true });
-  Items.registerSheet("dark-heresy", CriticalInjurySheet, { types: ["criticalInjury"], makeDefault: true });
-  Items.registerSheet("dark-heresy", MalignancySheet, { types: ["malignancy"], makeDefault: true });
-  Items.registerSheet("dark-heresy", MentalDisorderSheet, { types: ["mentalDisorder"], makeDefault: true });
-  Items.registerSheet("dark-heresy", MutationSheet, { types: ["mutation"], makeDefault: true });
-  Items.registerSheet("dark-heresy", PsychicPowerSheet, { types: ["psychicPower"], makeDefault: true });
-  Items.registerSheet("dark-heresy", TalentSheet, { types: ["talent"], makeDefault: true });
-  Items.registerSheet("dark-heresy", SpecialAbilitySheet, { types: ["specialAbility"], makeDefault: true });
-  Items.registerSheet("dark-heresy", TraitSheet, { types: ["trait"], makeDefault: true });
-  Items.registerSheet("dark-heresy", AptitudeSheet, { types: ["aptitude"], makeDefault: true });
+  Items.registerSheet("whfortyrp", WeaponSheet, { types: ["weapon"], makeDefault: true });
+  Items.registerSheet("whfortyrp", AmmunitionSheet, { types: ["ammunition"], makeDefault: true });
+  Items.registerSheet("whfortyrp", WeaponModificationSheet, { types: ["weaponModification"], makeDefault: true });
+  Items.registerSheet("whfortyrp", ArmourSheet, { types: ["armour"], makeDefault: true });
+  Items.registerSheet("whfortyrp", ForceFieldSheet, { types: ["forceField"], makeDefault: true });
+  Items.registerSheet("whfortyrp", CyberneticSheet, { types: ["cybernetic"], makeDefault: true });
+  Items.registerSheet("whfortyrp", DrugSheet, { types: ["drug"], makeDefault: true });
+  Items.registerSheet("whfortyrp", GearSheet, { types: ["gear"], makeDefault: true });
+  Items.registerSheet("whfortyrp", ToolSheet, { types: ["tool"], makeDefault: true });
+  Items.registerSheet("whfortyrp", CriticalInjurySheet, { types: ["criticalInjury"], makeDefault: true });
+  Items.registerSheet("whfortyrp", MalignancySheet, { types: ["malignancy"], makeDefault: true });
+  Items.registerSheet("whfortyrp", MentalDisorderSheet, { types: ["mentalDisorder"], makeDefault: true });
+  Items.registerSheet("whfortyrp", MutationSheet, { types: ["mutation"], makeDefault: true });
+  Items.registerSheet("whfortyrp", PsychicPowerSheet, { types: ["psychicPower"], makeDefault: true });
+  Items.registerSheet("whfortyrp", TalentSheet, { types: ["talent"], makeDefault: true });
+  Items.registerSheet("whfortyrp", SpecialAbilitySheet, { types: ["specialAbility"], makeDefault: true });
+  Items.registerSheet("whfortyrp", TraitSheet, { types: ["trait"], makeDefault: true });
+  Items.registerSheet("whfortyrp", AptitudeSheet, { types: ["aptitude"], makeDefault: true });
   initializeHandlebars();
-  game.settings.register("dark-heresy", "worldSchemaVersion", {
+  game.settings.register("whfortyrp", "worldSchemaVersion", {
     name: "World Version",
     hint: "Used to automatically upgrade worlds data when the system is upgraded.",
     scope: "world",
@@ -82,7 +82,7 @@ Hooks.once("init", () => {
 Hooks.once("ready", () => {
   migrateWorld();
   CONFIG.ChatMessage.documentClass.prototype.getRollData = function() {
-      return this.getFlag("dark-heresy", "rollData") 
+      return this.getFlag("whfortyrp", "rollData") 
   }
 });
 

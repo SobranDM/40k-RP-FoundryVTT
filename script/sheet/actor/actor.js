@@ -1,7 +1,7 @@
 import {prepareCommonRoll, prepareCombatRoll, preparePsychicPowerRoll} from "../../common/dialog.js";
-import DarkHeresyUtil from "../../common/util.js";
+import WHFortyRPUtil from "../../common/util.js";
 
-export class DarkHeresySheet extends ActorSheet {
+export class WHFortyRPSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
     html.find(".item-create").click(ev => this._onItemCreate(ev));
@@ -18,17 +18,26 @@ export class DarkHeresySheet extends ActorSheet {
   }
 
   /** @override */
-  getData() {
+  async getData() {
     const data = super.getData();
     data.system = data.data.system;
-    data.items = this.constructItemLists(data)
+    data.items = this.constructItemLists(data);
+    data.enrichment = {};
+    data.enrichment = await this._handleEnrichment();
     return data;
+  }
+
+  async _handleEnrichment() {
+    let enrichment = {};
+    enrichment["system.bio.notes"] = await TextEditor.enrichHTML(this.actor.system.bio.notes, { async: true });
+
+    return expandObject(enrichment);
   }
 
   /** @override */
   get template() {
     if (!game.user.isGM && this.actor.limited) {
-      return "systems/dark-heresy/template/sheet/actor/limited-sheet.html";
+      return "systems/whfortyrp/template/sheet/actor/limited-sheet.html";
     } else {
       return this.options.template;
     }
@@ -179,7 +188,7 @@ export class DarkHeresySheet extends ActorSheet {
     const div = $(event.currentTarget).parents(".item");
     const weapon = this.actor.items.get(div.data("itemId"));
     await prepareCombatRoll(
-      DarkHeresyUtil.createWeaponRollData(this.actor, weapon), 
+      WHFortyRPUtil.createWeaponRollData(this.actor, weapon), 
       this.actor
     );
   }
@@ -189,7 +198,7 @@ export class DarkHeresySheet extends ActorSheet {
     const div = $(event.currentTarget).parents(".item");
     const psychicPower = this.actor.items.get(div.data("itemId"));    
     await preparePsychicPowerRoll(
-      DarkHeresyUtil.createPsychicRollData(this.actor, psychicPower)
+      WHFortyRPUtil.createPsychicRollData(this.actor, psychicPower)
     );
   }
 

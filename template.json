@@ -79,8 +79,8 @@
             "unnatural": 0,
             "cost": 0
           },
-          "influence": {
-            "label": "CHARACTERISTIC.INFLUENCE",
+          "infamy": {
+            "label": "CHARACTERISTIC.INFAMY",
             "short": "Inf",
             "base": 0,
             "advance": 0,
@@ -169,18 +169,8 @@
             "advance": -20,
             "isSpecialist": true,
             "specialities": {
-              "adeptaSororitas": {
-                "label": "Adepta Sororitas",
-                "advance": -20,
-                "cost": 0
-              },
               "adeptusArbites": {
                 "label": "Adeptus Arbites",
-                "advance": -20,
-                "cost": 0
-              },
-              "adeptusAstartes": {
-                "label": "Adeptus Astartes",
                 "advance": -20,
                 "cost": 0
               },
@@ -196,21 +186,6 @@
               },
               "administratum": {
                 "label": "Administratum",
-                "advance": -20,
-                "cost": 0
-              },
-              "askellonSector": {
-                "label": "Askellon Sector",
-                "advance": -20,
-                "cost": 0
-              },
-              "chartistCaptains": {
-                "label": "Chartist Captains",
-                "advance": -20,
-                "cost": 0
-              },
-              "collegiaTitanicu": {
-                "label": "Collegia Titanicu",
                 "advance": -20,
                 "cost": 0
               },
@@ -239,33 +214,23 @@
                 "advance": -20,
                 "cost": 0
               },
-              "navigators": {
-                "label": "Navigators",
+              "jerichoReach": {
+                "label": "Jericho Reach",
                 "advance": -20,
                 "cost": 0
               },
-              "planetaryDefenceForces": {
-                "label": "Planetary Defence Forces",
+              "koronusExpanse": {
+                "label": "Koronus Expanse",
                 "advance": -20,
                 "cost": 0
               },
-              "rogueTraders": {
-                "label": "Rogue Traders",
-                "advance": -20,
-                "cost": 0
-              },
-              "scholaProgenium": {
-                "label": "Schola Progenium",
+              "screamingVortex": {
+                "label": "Screaming Vortex",
                 "advance": -20,
                 "cost": 0
               },
               "tech": {
                 "label": "Tech",
-                "advance": -20,
-                "cost": 0
-              },
-              "underworld": {
-                "label": "Underworld",
                 "advance": -20,
                 "cost": 0
               },
@@ -306,18 +271,23 @@
             "advance": -20,
             "isSpecialist": true,
             "specialities": {
-              "archaeotech": {
-                "label": "Archaeotech",
+              "adeptusMechanicus": {
+                "label": "Adeptus Mechanicus",
                 "advance": -20,
                 "cost": 0
               },
-              "chaosSpaceMarines": {
-                "label": "Chaos Space Marines",
+              "adeptusAstartes": {
+                "label": "Adeptus Astartes",
                 "advance": -20,
                 "cost": 0
               },
-              "criminalCartelsAndSmugglers": {
-                "label": "Criminal Cartels and Smugglers",
+              "codexAstartes": {
+                "label": "Codex Astartes",
+                "advance": -20,
+                "cost": 0
+              },
+              "archeotech": {
+                "label": "Archeotech",
                 "advance": -20,
                 "cost": 0
               },
@@ -346,8 +316,8 @@
                 "advance": -20,
                 "cost": 0
               },
-              "officioAssassinorum": {
-                "label": "Officio Assassinorum",
+              "navigators": {
+                "label": "Navigators",
                 "advance": -20,
                 "cost": 0
               },
@@ -441,18 +411,18 @@
                 "advance": -20,
                 "cost": 0
               },
+              "kroot": {
+                "label": "Kroot",
+                "advance": -20,
+                "cost": 0
+              },
               "lowGothic": {
                 "label": "Low Gothic",
                 "advance": -20,
                 "cost": 0
               },
-              "mercenary": {
-                "label": "Mercenary",
-                "advance": -20,
-                "cost": 0
-              },
-              "necrontyr": {
-                "label": "Necrontyr",
+              "mercenaryCant": {
+                "label": "Mercenary Cant",
                 "advance": -20,
                 "cost": 0
               },
@@ -633,6 +603,11 @@
                 "advance": -20,
                 "cost": 0
               },
+              "navisNobilite": {
+                "label": "Navis Nobilite",
+                "advance": -20,
+                "cost": 0
+              },
               "numerology": {
                 "label": "Numerology",
                 "advance": -20,
@@ -762,11 +737,6 @@
                 "advance": -20,
                 "cost": 0
               },
-              "cook": {
-                "label": "Cook",
-                "advance": -20,
-                "cost": 0
-              },
               "explorator": {
                 "label": "Explorator",
                 "advance": -20,
@@ -777,33 +747,13 @@
                 "advance": -20,
                 "cost": 0
               },
-              "loremancer": {
-                "label": "Loremancer",
-                "advance": -20,
-                "cost": 0
-              },
-              "morticator": {
-                "label": "Morticator",
-                "advance": -20,
-                "cost": 0
-              },
-              "performancer": {
-                "label": "Performancer",
-                "advance": -20,
-                "cost": 0
-              },
-              "prospector": {
-                "label": "Prospector",
+              "remembrancer": {
+                "label": "Remembrancer",
                 "advance": -20,
                 "cost": 0
               },
               "scrimshawer": {
                 "label": "Scrimshawer",
-                "advance": -20,
-                "cost": 0
-              },
-              "sculptor": {
-                "label": "Sculptor",
                 "advance": -20,
                 "cost": 0
               },
@@ -850,9 +800,8 @@
           "value": 0
         }
       },
-      "fate": {
-        "fate": {
-          "max": 0,
+      "infamy": {
+        "infamy": {
           "value": 0
         }
       },
@@ -872,23 +821,21 @@
         "initiative",
         "wounds",
         "fatigue",
-        "fate",
+        "infamy",
         "psy"
       ],
       "bio": {
-        "homeWorld": "",
+        "archetype": "",
         "background": "",
-        "role": "",
-        "elite": "",
-        "divination": "",
+        "motivation": "",
+        "pride": "",
+        "disgrace": "",
         "gender": "",
         "age": "",
         "build": "",
         "complexion": "",
         "hair": "",
-        "quirks": "",
-        "superstition": "",
-        "momentos": "",
+        "warband": "",
         "notes": ""
       },
       "experience": {
@@ -906,7 +853,7 @@
         "initiative",
         "wounds",
         "fatigue",
-        "fate",
+        "infamy",
         "psy"
       ],
       "experience": {

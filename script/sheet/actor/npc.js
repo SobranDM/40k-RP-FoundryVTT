@@ -1,11 +1,11 @@
-import { DarkHeresySheet } from "./actor.js";
+import { WHFortyRPSheet } from "./actor.js";
 
-export class NpcSheet extends DarkHeresySheet {
+export class NpcSheet extends WHFortyRPSheet {
 
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["dark-heresy", "sheet", "actor"],
-      template: "systems/dark-heresy/template/sheet/actor/npc.html",
+      classes: ["whfortyrp", "sheet", "actor"],
+      template: "systems/whfortyrp/template/sheet/actor/npc.html",
       width: 700,
       height: 881,
       resizable: false,

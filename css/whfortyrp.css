@@ -29,28 +29,28 @@
   --color-failure: red;
   --font-text: "Caslon Antique", serif;
 }
-.dark-heresy .flex {
+.whfortyrp .flex {
   display: flex;
 }
-.dark-heresy .row {
+.whfortyrp .row {
   flex-direction: row;
 }
-.dark-heresy .column {
+.whfortyrp .column {
   flex-direction: column;
 }
-.dark-heresy .border {
+.whfortyrp .border {
   border: 2px solid var(--color-border);
   border-radius: 3px;
   padding: 5px;
   text-align: center;
 }
-.dark-heresy .grow {
+.whfortyrp .grow {
   flex-grow: 1;
 }
-.dark-heresy .wrap {
+.whfortyrp .wrap {
   flex-wrap: wrap;
 }
-.dark-heresy .justify-center {
+.whfortyrp .justify-center {
   justify-content: center;
 }
 /* TAB COLORS */
@@ -295,24 +295,24 @@ li.folder.collapsed > .folder-header {
   background: #1b0f08b8;
   border: 1px solid #33333380;
 }
-.dark-heresy.chat {
+.whfortyrp.chat {
   color: var(--color-text);
   font-family: var(--font-text);
   font-size: 16px;
   line-height: 16px;
   padding: 5px;
 }
-.dark-heresy.chat.item img {
+.whfortyrp.chat.item img {
   border: 0;
   display: block;
   margin: 0 auto 8px;
   max-height: 64px;
   width: auto;
 }
-.dark-heresy.chat.roll h1 {
+.whfortyrp.chat.roll h1 {
   height: auto;
 }
-.dark-heresy.chat h3 {
+.whfortyrp.chat h3 {
   font-family: var(--font-text);
   font-size: 25px;
   font-weight: normal;
@@ -321,480 +321,480 @@ li.folder.collapsed > .folder-header {
   text-align: center;
   border-bottom: 1px solid var(--color-border);
 }
-.dark-heresy.chat .separator {
+.whfortyrp.chat .separator {
   border-top: 1px solid var(--color-border);
 }
-.dark-heresy.chat p {
+.whfortyrp.chat p {
   margin: 0 0 4px;
 }
-.dark-heresy.chat strong {
+.whfortyrp.chat strong {
   font-family: var(--font-text);
   font-weight: normal;
   font-size: 25px;
 }
-.dark-heresy.chat > .dice-rolls > .dice-roll-render {
+.whfortyrp.chat > .dice-rolls > .dice-roll-render {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.dark-heresy.dialog {
+.whfortyrp.dialog {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 100%;
 }
-.dark-heresy.dialog .wrapper {
+.whfortyrp.dialog .wrapper {
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
   margin-top: 5px;
   align-items: center;
 }
-.dark-heresy.dialog .separator {
+.whfortyrp.dialog .separator {
   flex-basis: 100%;
   padding-top: 5px;
   margin-bottom: 5px;
   border-bottom: 1px solid var(--color-border);
 }
-.dark-heresy.dialog .wrapper label {
+.whfortyrp.dialog .wrapper label {
   width: 4em;
 }
-.dark-heresy.dialog .wrapper input,
-.dark-heresy.dialog .wrapper select {
+.whfortyrp.dialog .wrapper input,
+.whfortyrp.dialog .wrapper select {
   width: 101px;
   margin-left: 5px;
   text-align: center;
   font-size: 16px;
 }
-.dark-heresy.dialog .wrapper .range {
+.whfortyrp.dialog .wrapper .range {
   width: 66px;
 }
-.dark-heresy.dialog .wrapper .rangeBox {
+.whfortyrp.dialog .wrapper .rangeBox {
   width: 30px;
 }
-.dark-heresy .stats {
+.whfortyrp .stats {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 100%;
 }
-.dark-heresy .stats .stats-row {
+.whfortyrp .stats .stats-row {
   display: flex;
   flex-basis: 100%;
   margin-top: 8px;
   justify-content: space-between;
 }
-.dark-heresy .stats .stats-row:last-child {
+.whfortyrp .stats .stats-row:last-child {
   margin-bottom: 4px;
 }
-.dark-heresy .stats .stats-row .stat {
+.whfortyrp .stats .stats-row .stat {
   display: flex;
   align-items: center;
 }
-.dark-heresy .stats .stats-row .stat {
+.whfortyrp .stats .stats-row .stat {
   display: flex;
 }
-.dark-heresy .stats .stats-row .stat input,
-.dark-heresy .stats .stats-row .stat select {
+.whfortyrp .stats .stats-row .stat input,
+.whfortyrp .stats .stats-row .stat select {
   margin-left: 8px;
 }
-.dark-heresy.mental-disorder .notes-editor {
+.whfortyrp.mental-disorder .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.malignancy .notes-editor {
+.whfortyrp.malignancy .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.mutation .notes-editor {
+.whfortyrp.mutation .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.talent .notes-editor {
+.whfortyrp.talent .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.talent .stats {
+.whfortyrp.talent .stats {
   height: 165px;
   align-content: baseline;
 }
-.dark-heresy.talent .stats .stats-row .stat.prerequisites input {
+.whfortyrp.talent .stats .stats-row .stat.prerequisites input {
   width: 28em;
 }
-.dark-heresy.talent .stats .stats-row .stat.tier input {
+.whfortyrp.talent .stats .stats-row .stat.tier input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.talent .stats .stats-row .stat.aptitudes input {
+.whfortyrp.talent .stats .stats-row .stat.aptitudes input {
   width: 416px;
 }
-.dark-heresy.talent .stats .stats-row .stat.benefit input {
+.whfortyrp.talent .stats .stats-row .stat.benefit input {
   width: 428px;
 }
-.dark-heresy.trait .notes-editor {
+.whfortyrp.trait .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.trait .stats {
+.whfortyrp.trait .stats {
   height: 165px;
   align-content: baseline;
 }
-.dark-heresy.trait .stats .stats-row .stat.benefit input {
+.whfortyrp.trait .stats .stats-row .stat.benefit input {
   width: 428px;
 }
-.dark-heresy.special-ability .notes-editor {
+.whfortyrp.special-ability .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.special-ability .stats {
+.whfortyrp.special-ability .stats {
   height: 165px;
   align-content: baseline;
 }
-.dark-heresy.special-ability .stats .stats-row .stat.benefit input {
+.whfortyrp.special-ability .stats .stats-row .stat.benefit input {
   width: 428px;
 }
-.dark-heresy.psychic-power .notes-editor {
+.whfortyrp.psychic-power .notes-editor {
   height: 193px;
   max-height: 193px;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.prerequisite input {
+.whfortyrp.psychic-power .stats .stats-row .stat.prerequisite input {
   width: 10em;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.action input {
+.whfortyrp.psychic-power .stats .stats-row .stat.action input {
   width: 6em;
   text-align: center;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.focus-power input[type="number"] {
+.whfortyrp.psychic-power .stats .stats-row .stat.focus-power input[type="number"] {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.focus-power input[type="text"] {
+.whfortyrp.psychic-power .stats .stats-row .stat.focus-power input[type="text"] {
   width: 8em;
   text-align: center;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.range input {
+.whfortyrp.psychic-power .stats .stats-row .stat.range input {
   width: 4em;
   text-align: center;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.sustained input {
+.whfortyrp.psychic-power .stats .stats-row .stat.sustained input {
   width: 6em;
   text-align: center;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.subtype input {
+.whfortyrp.psychic-power .stats .stats-row .stat.subtype input {
   width: 9em;
   text-align: center;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.damage input {
+.whfortyrp.psychic-power .stats .stats-row .stat.damage input {
   width: 5em;
   text-align: center;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.damage select {
+.whfortyrp.psychic-power .stats .stats-row .stat.damage select {
   width: 6em;
   margin-left: 2px;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.penetration input {
+.whfortyrp.psychic-power .stats .stats-row .stat.penetration input {
   width: 4em;
   text-align: center;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.rate-of-fire input {
+.whfortyrp.psychic-power .stats .stats-row .stat.rate-of-fire input {
   width: 2em;
   text-align: center;
   margin: 0 2px;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.zone select {
+.whfortyrp.psychic-power .stats .stats-row .stat.zone select {
   width: 8em;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.special input {
+.whfortyrp.psychic-power .stats .stats-row .stat.special input {
   width: 427px;
 }
-.dark-heresy.psychic-power .stats .stats-row .stat.short-description input {
+.whfortyrp.psychic-power .stats .stats-row .stat.short-description input {
   width: 372px;
 }
-.dark-heresy.critical-injury .notes-editor {
+.whfortyrp.critical-injury .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.critical-injury .header .part,
-.dark-heresy.critical-injury .header .type {
+.whfortyrp.critical-injury .header .part,
+.whfortyrp.critical-injury .header .type {
   flex-basis: 50%;
 }
-.dark-heresy.critical-injury .header .part select,
-.dark-heresy.critical-injury .header .type select {
+.whfortyrp.critical-injury .header .part select,
+.whfortyrp.critical-injury .header .type select {
   margin: 0 8px;
 }
-.dark-heresy.weapon .notes-editor {
+.whfortyrp.weapon .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.weapon .stats .stats-row .stat.class select {
+.whfortyrp.weapon .stats .stats-row .stat.class select {
   width: 5em;
 }
-.dark-heresy.weapon .stats .stats-row .stat.type select {
+.whfortyrp.weapon .stats .stats-row .stat.type select {
   width: 5em;
 }
-.dark-heresy.weapon .stats .stats-row .stat.range input {
+.whfortyrp.weapon .stats .stats-row .stat.range input {
   width: 4em;
   text-align: center;
 }
-.dark-heresy.weapon .stats .stats-row .stat.reload input {
+.whfortyrp.weapon .stats .stats-row .stat.reload input {
   width: 6em;
   text-align: center;
 }
-.dark-heresy.weapon .stats .stats-row .stat.clip input {
+.whfortyrp.weapon .stats .stats-row .stat.clip input {
   width: 2em;
   text-align: center;
   margin: 0 2px;
 }
-.dark-heresy.weapon .stats .stats-row .stat.damage input {
+.whfortyrp.weapon .stats .stats-row .stat.damage input {
   width: 5em;
   text-align: center;
 }
-.dark-heresy.weapon .stats .stats-row .stat.damage select {
+.whfortyrp.weapon .stats .stats-row .stat.damage select {
   width: 6em;
   margin-left: 2px;
 }
-.dark-heresy.weapon .stats .stats-row .stat.penetration input {
+.whfortyrp.weapon .stats .stats-row .stat.penetration input {
   width: 4em;
   text-align: center;
 }
-.dark-heresy.weapon .stats .stats-row .stat.rate-of-fire input {
+.whfortyrp.weapon .stats .stats-row .stat.rate-of-fire input {
   width: 2em;
   text-align: center;
   margin: 0 2px;
 }
-.dark-heresy.weapon .stats .stats-row .stat.craftsmanship select {
+.whfortyrp.weapon .stats .stats-row .stat.craftsmanship select {
   width: 8em;
 }
-.dark-heresy.weapon .stats .stats-row .stat.availability select {
+.whfortyrp.weapon .stats .stats-row .stat.availability select {
   width: 8em;
 }
-.dark-heresy.weapon .stats .stats-row .stat.weight input {
+.whfortyrp.weapon .stats .stats-row .stat.weight input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.weapon .stats .stats-row .stat.attack input {
+.whfortyrp.weapon .stats .stats-row .stat.attack input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.weapon .stats .stats-row .stat.special input {
+.whfortyrp.weapon .stats .stats-row .stat.special input {
   width: 29em;
 }
-.dark-heresy.armour .notes-editor {
+.whfortyrp.armour .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.armour .stats .stats-row .stat.type input {
+.whfortyrp.armour .stats .stats-row .stat.type input {
   width: 8em;
 }
-.dark-heresy.armour .stats .stats-row .stat.max-agility input {
+.whfortyrp.armour .stats .stats-row .stat.max-agility input {
   width: 4em;
   text-align: center;
 }
-.dark-heresy.armour .stats .stats-row .stat.part input {
+.whfortyrp.armour .stats .stats-row .stat.part input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.armour .stats .stats-row .stat.craftsmanship select {
+.whfortyrp.armour .stats .stats-row .stat.craftsmanship select {
   width: 8em;
 }
-.dark-heresy.armour .stats .stats-row .stat.availability select {
+.whfortyrp.armour .stats .stats-row .stat.availability select {
   width: 8em;
 }
-.dark-heresy.armour .stats .stats-row .stat.weight input {
+.whfortyrp.armour .stats .stats-row .stat.weight input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.gear .notes-editor {
+.whfortyrp.gear .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.gear .stats {
+.whfortyrp.gear .stats {
   height: 165px;
   align-content: baseline;
 }
-.dark-heresy.gear .stats .stats-row .stat.craftsmanship select {
+.whfortyrp.gear .stats .stats-row .stat.craftsmanship select {
   width: 8em;
 }
-.dark-heresy.gear .stats .stats-row .stat.availability select {
+.whfortyrp.gear .stats .stats-row .stat.availability select {
   width: 8em;
 }
-.dark-heresy.gear .stats .stats-row .stat.weight input {
+.whfortyrp.gear .stats .stats-row .stat.weight input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.gear .stats .stats-row .stat.short-description input {
+.whfortyrp.gear .stats .stats-row .stat.short-description input {
   width: 31em;
 }
-.dark-heresy.drug .notes-editor {
+.whfortyrp.drug .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.drug .stats {
+.whfortyrp.drug .stats {
   height: 165px;
   align-content: baseline;
 }
-.dark-heresy.drug .stats .stats-row .stat.craftsmanship select {
+.whfortyrp.drug .stats .stats-row .stat.craftsmanship select {
   width: 8em;
 }
-.dark-heresy.drug .stats .stats-row .stat.availability select {
+.whfortyrp.drug .stats .stats-row .stat.availability select {
   width: 8em;
 }
-.dark-heresy.drug .stats .stats-row .stat.weight input {
+.whfortyrp.drug .stats .stats-row .stat.weight input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.drug .stats .stats-row .stat.short-description input {
+.whfortyrp.drug .stats .stats-row .stat.short-description input {
   width: 31em;
 }
-.dark-heresy.tool .notes-editor {
+.whfortyrp.tool .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.tool .stats {
+.whfortyrp.tool .stats {
   height: 165px;
   align-content: baseline;
 }
-.dark-heresy.tool .stats .stats-row .stat.craftsmanship select {
+.whfortyrp.tool .stats .stats-row .stat.craftsmanship select {
   width: 8em;
 }
-.dark-heresy.tool .stats .stats-row .stat.availability select {
+.whfortyrp.tool .stats .stats-row .stat.availability select {
   width: 8em;
 }
-.dark-heresy.tool .stats .stats-row .stat.weight input {
+.whfortyrp.tool .stats .stats-row .stat.weight input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.tool .stats .stats-row .stat.short-description input {
+.whfortyrp.tool .stats .stats-row .stat.short-description input {
   width: 31em;
 }
-.dark-heresy.cybernetic .notes-editor {
+.whfortyrp.cybernetic .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.cybernetic .stats {
+.whfortyrp.cybernetic .stats {
   height: 165px;
   align-content: baseline;
 }
-.dark-heresy.cybernetic .stats .stats-row .stat.craftsmanship select {
+.whfortyrp.cybernetic .stats .stats-row .stat.craftsmanship select {
   width: 8em;
 }
-.dark-heresy.cybernetic .stats .stats-row .stat.availability select {
+.whfortyrp.cybernetic .stats .stats-row .stat.availability select {
   width: 8em;
 }
-.dark-heresy.cybernetic .stats .stats-row .stat.weight input {
+.whfortyrp.cybernetic .stats .stats-row .stat.weight input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.weapon-modification .notes-editor {
+.whfortyrp.weapon-modification .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.weapon-modification .stats {
+.whfortyrp.weapon-modification .stats {
   height: 165px;
   align-content: baseline;
 }
-.dark-heresy.weapon-modification .stats .stats-row .stat.craftsmanship select {
+.whfortyrp.weapon-modification .stats .stats-row .stat.craftsmanship select {
   width: 8em;
 }
-.dark-heresy.weapon-modification .stats .stats-row .stat.availability select {
+.whfortyrp.weapon-modification .stats .stats-row .stat.availability select {
   width: 8em;
 }
-.dark-heresy.weapon-modification .stats .stats-row .stat.weight input {
+.whfortyrp.weapon-modification .stats .stats-row .stat.weight input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.weapon-modification .stats .stats-row .stat.upgrades input {
+.whfortyrp.weapon-modification .stats .stats-row .stat.upgrades input {
   width: 330px;
 }
-.dark-heresy.ammunition .notes-editor {
+.whfortyrp.ammunition .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.ammunition .stats .stats-row .stat.weapon input {
+.whfortyrp.ammunition .stats .stats-row .stat.weapon input {
   width: 26em;
 }
-.dark-heresy.ammunition .stats .stats-row .stat.quantity input {
+.whfortyrp.ammunition .stats .stats-row .stat.quantity input {
   width: 4em;
   text-align: center;
 }
-.dark-heresy.ammunition .stats .stats-row .stat.damage input {
+.whfortyrp.ammunition .stats .stats-row .stat.damage input {
   width: 5em;
   text-align: center;
 }
-.dark-heresy.ammunition .stats .stats-row .stat.damage select {
+.whfortyrp.ammunition .stats .stats-row .stat.damage select {
   width: 6em;
   margin-left: 2px;
 }
-.dark-heresy.ammunition .stats .stats-row .stat.penetration input {
+.whfortyrp.ammunition .stats .stats-row .stat.penetration input {
   width: 4em;
   text-align: center;
 }
-.dark-heresy.ammunition .stats .stats-row .stat.attack input {
+.whfortyrp.ammunition .stats .stats-row .stat.attack input {
   width: 4em;
   text-align: center;
 }
-.dark-heresy.ammunition .stats .stats-row .stat.craftsmanship select {
+.whfortyrp.ammunition .stats .stats-row .stat.craftsmanship select {
   width: 8em;
 }
-.dark-heresy.ammunition .stats .stats-row .stat.availability select {
+.whfortyrp.ammunition .stats .stats-row .stat.availability select {
   width: 8em;
 }
-.dark-heresy.ammunition .stats .stats-row .stat.weight input {
+.whfortyrp.ammunition .stats .stats-row .stat.weight input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy.ammunition .stats .stats-row .stat.special input {
+.whfortyrp.ammunition .stats .stats-row .stat.special input {
   width: 427px;
 }
-.dark-heresy.force-field .notes-editor {
+.whfortyrp.force-field .notes-editor {
   height: 165px;
   max-height: 165px;
 }
-.dark-heresy.force-field .stats {
+.whfortyrp.force-field .stats {
   height: 165px;
   align-content: baseline;
 }
-.dark-heresy.force-field .stats .stats-row .stat.protection-rating input {
+.whfortyrp.force-field .stats .stats-row .stat.protection-rating input {
   width: 4em;
   text-align: center;
 }
-.dark-heresy.force-field .stats .stats-row .stat.overload-chance input {
+.whfortyrp.force-field .stats .stats-row .stat.overload-chance input {
   width: 4em;
   text-align: center;
 }
-.dark-heresy.force-field .stats .stats-row .stat.craftsmanship select {
+.whfortyrp.force-field .stats .stats-row .stat.craftsmanship select {
   width: 8em;
 }
-.dark-heresy.force-field .stats .stats-row .stat.availability select {
+.whfortyrp.force-field .stats .stats-row .stat.availability select {
   width: 8em;
 }
-.dark-heresy.force-field .stats .stats-row .stat.weight input {
+.whfortyrp.force-field .stats .stats-row .stat.weight input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy .tabs .item {
+.whfortyrp .tabs .item {
   padding: 5px;
   font-size: 18px;
 }
-.dark-heresy .tabs .item.active {
+.whfortyrp .tabs .item.active {
   text-shadow: 0 0 10px var(--color-highlight);
 }
-.dark-heresy .tab {
+.whfortyrp .tab {
   height: 100%;
   width: 100%;
 }
-.dark-heresy .sheet-body {
+.whfortyrp .sheet-body {
   overflow: hidden;
   flex-grow: 1;
 }
-.dark-heresy .editor,
-.dark-heresy .editor-content {
+.whfortyrp .editor,
+.whfortyrp .editor-content {
   font-family: var(--font-text);
   font-size: 16px;
   color: var(--color-text);
   height: 100%;
   width: 100%;
 }
-.dark-heresy .sheet-tabs {
+.whfortyrp .sheet-tabs {
   border-radius: 3px;
   background: #562e2e;
   color: var(--color-title);
@@ -802,15 +802,15 @@ li.folder.collapsed > .folder-header {
   margin: 8px 0;
   padding: 0 8px;
 }
-.dark-heresy .sheet-tabs b:hover {
+.whfortyrp .sheet-tabs b:hover {
   cursor: pointer;
   text-shadow: 0 0 8px var(--color-highlight);
 }
-.dark-heresy .item-edit:hover {
+.whfortyrp .item-edit:hover {
   cursor: pointer;
   text-shadow: 0 0 8px var(--color-highlight);
 }
-.dark-heresy h1 {
+.whfortyrp h1 {
   width: 100%;
   height: 24px;
   border: 0 none;
@@ -825,7 +825,7 @@ li.folder.collapsed > .folder-header {
   background: #1b0f08b8;
   color: var(--color-title);
 }
-.dark-heresy button {
+.whfortyrp button {
   background: transparent;
   border: 0 none;
   border-radius: 3px;
@@ -840,22 +840,22 @@ li.folder.collapsed > .folder-header {
   padding: 2px 4px;
   width: auto;
 }
-.dark-heresy button:focus,
-.dark-heresy button:hover {
+.whfortyrp button:focus,
+.whfortyrp button:hover {
   background: var(--color-foreground);
   color: var(--color-title);
 }
-.dark-heresy label,
-.dark-heresy span {
+.whfortyrp label,
+.whfortyrp span {
   color: var(--color-text);
   font-family: var(--font-text);
   font-size: 16px;
   font-weight: bold;
 }
-.dark-heresy input[type="number"],
-.dark-heresy input[type="text"],
-.dark-heresy select,
-.dark-heresy textarea {
+.whfortyrp input[type="number"],
+.whfortyrp input[type="text"],
+.whfortyrp select,
+.whfortyrp textarea {
   background: #c1908161;
   border: 1px solid var(--color-border);
   border-radius: 3px;
@@ -868,24 +868,24 @@ li.folder.collapsed > .folder-header {
   padding: 2px 4px;
   width: 100%;
 }
-.dark-heresy input[type="number"] {
+.whfortyrp input[type="number"] {
   -moz-appearance: textfield;
   text-align: center;
 }
-.dark-heresy input[type="number"]::-webkit-outer-spin-button,
-.dark-heresy input[type="number"]::-webkit-inner-spin-button {
+.whfortyrp input[type="number"]::-webkit-outer-spin-button,
+.whfortyrp input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.dark-heresy input[type="number"]:focus,
-.dark-heresy input[type="text"]:focus,
-.dark-heresy select:focus,
-.dark-heresy textarea:focus {
+.whfortyrp input[type="number"]:focus,
+.whfortyrp input[type="text"]:focus,
+.whfortyrp select:focus,
+.whfortyrp textarea:focus {
   border: 1px solid var(--color-border);
   box-shadow: 0 0 10px var(--color-shadow);
   outline: none;
 }
-.dark-heresy .item-list {
+.whfortyrp .item-list {
   display: flex;
   flex-direction: column;
   font-family: var(--font-text);
@@ -894,7 +894,7 @@ li.folder.collapsed > .folder-header {
   min-height: 0;
   width: 100%;
 }
-.dark-heresy .item-list .header {
+.whfortyrp .item-list .header {
   width: 100%;
   height: 22px;
   border: 0 none;
@@ -908,50 +908,50 @@ li.folder.collapsed > .folder-header {
   background: #5d2f149e;
   color: var(--color-title);
 }
-.dark-heresy .item-list .items {
+.whfortyrp .item-list .items {
   overflow-y: scroll;
   width: 100%;
 }
-.dark-heresy .item-list .items .item {
+.whfortyrp .item-list .items .item {
   align-items: center;
 }
-.dark-heresy .item-list .fas {
+.whfortyrp .item-list .fas {
   font-size: 10px;
 }
-.dark-heresy .item-list .items .item:nth-child(odd) {
+.whfortyrp .item-list .items .item:nth-child(odd) {
   background: rgba(0, 0, 0, 0.2);
 }
-.dark-heresy .item-list .items .item button:focus,
-.dark-heresy .item-list .items .item button:hover {
+.whfortyrp .item-list .items .item button:focus,
+.whfortyrp .item-list .items .item button:hover {
   background: var(--color-foreground);
 }
-.dark-heresy .item-list .items .item .image {
+.whfortyrp .item-list .items .item .image {
   background-size: 20px;
   background-repeat: no-repeat;
   height: 20px;
   width: 20px;
   margin-right: 5px;
 }
-.dark-heresy.sheet .header input,
-.dark-heresy.sheet .header span {
+.whfortyrp.sheet .header input,
+.whfortyrp.sheet .header span {
   flex-grow: 1;
   margin: 0 8px;
 }
-.dark-heresy.sheet .header .header-row {
+.whfortyrp.sheet .header .header-row {
   align-items: baseline;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 5px 0;
 }
-.dark-heresy.sheet .header .avatar {
+.whfortyrp.sheet .header .avatar {
   background: radial-gradient(closest-side, var(--color-foreground) 0%, transparent 100%);
   flex: 0 0 auto;
   height: 95px;
   margin-right: 8px;
   width: 95px;
 }
-.dark-heresy.sheet .header .avatar img {
+.whfortyrp.sheet .header .avatar img {
   border: 0 none;
   display: block;
   max-width: 95px;
@@ -960,83 +960,90 @@ li.folder.collapsed > .folder-header {
   min-height: 20px;
   margin: auto;
 }
-.dark-heresy.sheet .avatar img:hover {
+.whfortyrp.sheet .avatar img:hover {
   box-shadow: 0 0 10px var(--color-highlight);
   cursor: pointer;
 }
-.dark-heresy.sheet .notes-editor {
+.whfortyrp.sheet .notes-editor {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 100%;
 }
-.dark-heresy .acolyte {
+.whfortyrp .acolyte {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
-.dark-heresy .acolyte .header .home-world,
-.dark-heresy .acolyte .header .background {
-  flex-basis: 40%;
+.whfortyrp .acolyte .header .archetype,
+.whfortyrp .acolyte .header .motivation {
+  flex-basis: 38%;
 }
-.dark-heresy .acolyte .header .role,
-.dark-heresy .acolyte .header .elite {
-  flex-basis: 32%;
+.whfortyrp .acolyte .header .pride,
+.whfortyrp .acolyte .header .disgrace {
+  flex-basis: 38%;
 }
-.dark-heresy .acolyte .header .home-world input,
-.dark-heresy .acolyte .header .background input,
-.dark-heresy .acolyte .header .role input,
-.dark-heresy .acolyte .header .elite input {
+.whfortyrp .acolyte .header .archetype label,
+.whfortyrp .acolyte .header .pride label {
+  margin-right: 5px;
+}
+.whfortyrp .acolyte .header .archetype input,
+.whfortyrp .acolyte .header .motivation input,
+.whfortyrp .acolyte .header .pride input,
+.whfortyrp .acolyte .header .disgrace input {
   width: 11em;
 }
-.dark-heresy .acolyte .header .fate input,
-.dark-heresy .acolyte .header .fatigue input {
+.whfortyrp .acolyte .header .infamyCurrency input,
+.whfortyrp .acolyte .header .fatigue input {
   width: 2em;
-  margin: 0 5px;
+  margin: 0 5px 0 5px;
 }
-.dark-heresy .npc {
+.whfortyrp .npc {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
-.dark-heresy .npc .header .type,
-.dark-heresy .npc .header .faction {
-  flex-basis: 35%;
+.whfortyrp .npc .header .archetype,
+.whfortyrp .npc .header .motivation {
+  flex-basis: 38%;
 }
-.dark-heresy .npc .header .threat-level,
-.dark-heresy .npc .header .subfaction {
-  flex-basis: 40%;
+.whfortyrp .npc .header .pride,
+.whfortyrp .npc .header .disgrace {
+  flex-basis: 38%;
 }
-.dark-heresy .npc .header .type select,
-.dark-heresy .npc .header .faction input,
-.dark-heresy .npc .header .threat-level input,
-.dark-heresy .npc .header .subfaction input {
+.whfortyrp .npc .header .archetype label,
+.whfortyrp .npc .header .pride label {
+  margin-right: 5px;
+}
+.whfortyrp .npc .header .archetype input,
+.whfortyrp .npc .header .motivation input,
+.whfortyrp .npc .header .pride input,
+.whfortyrp .npc .header .disgrace input {
   width: 11em;
-  height: 22px;
 }
-.dark-heresy .npc .header .fate input,
-.dark-heresy .npc .header .fatigue input {
+.whfortyrp .npc .header .infamyCurrency input,
+.whfortyrp .npc .header .fatigue input {
   width: 2em;
-  margin: 0 5px;
+  margin: 0 5px 0 5px;
 }
-.dark-heresy .limited-sheet {
+.whfortyrp .limited-sheet {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
-.dark-heresy .limited-sheet .notes-editor {
+.whfortyrp .limited-sheet .notes-editor {
   width: 100%;
   height: 100%;
   margin-top: 2px;
 }
-.dark-heresy .limited-sheet .notes-editor-content {
+.whfortyrp .limited-sheet .notes-editor-content {
   height: 90%;
   width: 90%;
 }
-.dark-heresy .stats .insanities {
+.whfortyrp .stats .insanities {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1044,90 +1051,90 @@ li.folder.collapsed > .folder-header {
   margin-right: 2px;
   align-items: center;
 }
-.dark-heresy .stats .insanities .total {
+.whfortyrp .stats .insanities .total {
   font-size: 24px;
   height: 50px;
   width: 50px;
   margin: 1px;
 }
-.dark-heresy .stats .insanities .information {
+.whfortyrp .stats .insanities .information {
   display: flex;
   flex-direction: column;
 }
-.dark-heresy .stats .insanities .information .roll-insanity {
+.whfortyrp .stats .insanities .information .roll-insanity {
   height: 24px;
   width: 24px;
   margin: 1px;
   text-align: center;
 }
-.dark-heresy .stats .insanities .information .bonus {
+.whfortyrp .stats .insanities .information .bonus {
   height: 24px;
   width: 24px;
   margin: 1px;
   text-align: center;
 }
-.dark-heresy .stats .insanities .item-list .header {
+.whfortyrp .stats .insanities .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .stats .insanities .item-list .header .name {
+.whfortyrp .stats .insanities .item-list .header .name {
   flex-basis: 85%;
 }
-.dark-heresy .stats .insanities .item-list .items .insanity {
+.whfortyrp .stats .insanities .item-list .items .insanity {
   width: 100%;
 }
-.dark-heresy .stats .insanities .item-list .items {
-  max-height: 187px;
-  height: 187px;
+.whfortyrp .stats .insanities .item-list .items {
+  max-height: 108px;
+  height: 108px;
 }
-.dark-heresy .stats .insanities .item-list .items .item .name {
+.whfortyrp .stats .insanities .item-list .items .item .name {
   flex-basis: 90%;
   align-items: center;
 }
-.dark-heresy .stats .characteristics {
+.whfortyrp .stats .characteristics {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 54%;
 }
-.dark-heresy .stats .characteristics .left {
+.whfortyrp .stats .characteristics .left {
   display: flex;
   flex-direction: column;
   margin: 2px 0;
   flex-basis: calc(50% - 2px);
 }
-.dark-heresy .stats .characteristics .right {
+.whfortyrp .stats .characteristics .right {
   display: flex;
   flex-direction: column;
   margin: 2px 0;
   flex-basis: calc(50% - 2px);
 }
-.dark-heresy .stats .characteristics .characteristic {
+.whfortyrp .stats .characteristics .characteristic {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.dark-heresy .stats .characteristics .characteristic .name {
+.whfortyrp .stats .characteristics .characteristic .name {
   flex-basis: 64%;
   font-size: 20px;
   text-align: center;
 }
-.dark-heresy .stats .characteristics .characteristic .total {
+.whfortyrp .stats .characteristics .characteristic .total {
   font-size: 24px;
   height: 50px;
   width: 50px;
   margin: 1px;
 }
-.dark-heresy .stats .characteristics .characteristic .information {
+.whfortyrp .stats .characteristics .characteristic .information {
   display: flex;
   flex-direction: column;
 }
-.dark-heresy .stats .characteristics .characteristic .information input {
+.whfortyrp .stats .characteristics .characteristic .information input {
   height: 24px;
   width: 24px;
   margin: 1px;
   text-align: center;
 }
-.dark-heresy .stats .corruptions {
+.whfortyrp .stats .corruptions {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1135,182 +1142,182 @@ li.folder.collapsed > .folder-header {
   margin-left: 2px;
   align-items: center;
 }
-.dark-heresy .stats .corruptions .total {
+.whfortyrp .stats .corruptions .total {
   font-size: 24px;
   height: 50px;
   width: 50px;
   margin: 1px;
 }
-.dark-heresy .stats .corruptions .information {
+.whfortyrp .stats .corruptions .information {
   display: flex;
   flex-direction: column;
 }
-.dark-heresy .stats .corruptions .information .roll-corruption {
+.whfortyrp .stats .corruptions .information .roll-corruption {
   height: 24px;
   width: 24px;
   margin: 1px;
   text-align: center;
 }
-.dark-heresy .stats .corruptions .information .bonus {
+.whfortyrp .stats .corruptions .information .bonus {
   height: 24px;
   width: 24px;
   margin: 1px;
   text-align: center;
 }
-.dark-heresy .stats .corruptions .item-list .header {
+.whfortyrp .stats .corruptions .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .stats .corruptions .item-list .header .name {
+.whfortyrp .stats .corruptions .item-list .header .name {
   flex-basis: 85%;
 }
-.dark-heresy .stats .corruptions .item-list .items .corruption {
+.whfortyrp .stats .corruptions .item-list .items .corruption {
   width: 100%;
 }
-.dark-heresy .stats .corruptions .item-list .items {
+.whfortyrp .stats .corruptions .item-list .items {
   max-height: 80px;
   height: 80px;
 }
-.dark-heresy .stats .corruptions .item-list .items .item .name {
+.whfortyrp .stats .corruptions .item-list .items .item .name {
   flex-basis: 90%;
   align-items: center;
 }
-.dark-heresy .stats .skills {
+.whfortyrp .stats .skills {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 100%;
   margin-top: 2px;
 }
-.dark-heresy .stats .skills .skill {
+.whfortyrp .stats .skills .skill {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
 }
-.dark-heresy .stats .skills .skill .name {
+.whfortyrp .stats .skills .skill .name {
   flex-basis: 60%;
   font-size: 20px;
   font-weight: bold;
 }
-.dark-heresy .stats .skills .skill .total {
+.whfortyrp .stats .skills .skill .total {
   font-size: 12px;
   height: 24px;
   width: 40px;
   margin: 1px;
 }
-.dark-heresy .stats .skills .skill .information {
+.whfortyrp .stats .skills .skill .information {
   display: flex;
   flex-direction: column;
 }
-.dark-heresy .stats .skills .skill .information input {
+.whfortyrp .stats .skills .skill .information input {
   height: 24px;
   width: 24px;
   margin: 1px;
   text-align: center;
 }
-.dark-heresy .stats .skills .item-list {
+.whfortyrp .stats .skills .item-list {
   margin-top: 2px;
   min-height: auto;
 }
-.dark-heresy .stats .skills .item-list .item.speciality {
+.whfortyrp .stats .skills .item-list .item.speciality {
   margin: 0 2px;
 }
-.dark-heresy .stats .skills .item-list .item.speciality .total {
+.whfortyrp .stats .skills .item-list .item.speciality .total {
   font-size: 12px;
   height: 24px;
   width: 40px;
   margin: 1px;
 }
-.dark-heresy .stats .skills .item-list .item.speciality .name {
+.whfortyrp .stats .skills .item-list .item.speciality .name {
   flex-basis: 70%;
   font-size: 20px;
   font-weight: bold;
 }
-.dark-heresy .stats .skills .item-list .item.speciality .name .roll-speciality {
+.whfortyrp .stats .skills .item-list .item.speciality .name .roll-speciality {
   text-align: left;
 }
-.dark-heresy .stats .skills .item-list .item.speciality .information {
+.whfortyrp .stats .skills .item-list .item.speciality .information {
   display: flex;
   flex-direction: column;
 }
-.dark-heresy .stats .skills .item-list .item.speciality .information input {
+.whfortyrp .stats .skills .item-list .item.speciality .information input {
   height: 24px;
   width: 24px;
   margin: 1px;
   text-align: center;
 }
-.dark-heresy .stats .skills .item-list .items .item:nth-child(odd) {
+.whfortyrp .stats .skills .item-list .items .item:nth-child(odd) {
   background: none;
 }
-.dark-heresy .abilities {
+.whfortyrp .abilities {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex-basis: calc(46% - 2px);
   margin-left: 2px;
 }
-.dark-heresy .abilities .item-list .header {
+.whfortyrp .abilities .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .abilities .item-list .name {
+.whfortyrp .abilities .item-list .name {
   flex-basis: 20%;
   text-align: center;
   align-items: center;
   font-weight: bold;
 }
-.dark-heresy .abilities .item-list .benefit {
+.whfortyrp .abilities .item-list .benefit {
   flex-basis: 80%;
   text-align: center;
 }
-.dark-heresy .abilities .item-list .items .ability {
+.whfortyrp .abilities .item-list .items .ability {
   width: 100%;
 }
-.dark-heresy .abilities .item-list .items {
+.whfortyrp .abilities .item-list .items {
   max-height: 241px;
   height: 241px;
 }
-.dark-heresy .combat .wounds {
+.whfortyrp .combat .wounds {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex-basis: 30%;
 }
-.dark-heresy .combat .wounds .item-list .header {
+.whfortyrp .combat .wounds .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .combat .wounds .item-list .header .name {
+.whfortyrp .combat .wounds .item-list .header .name {
   flex-basis: 94%;
 }
-.dark-heresy .combat .wounds .item-list .items .wound {
+.whfortyrp .combat .wounds .item-list .items .wound {
   width: 100%;
 }
-.dark-heresy .combat .wounds .item-list .items {
+.whfortyrp .combat .wounds .item-list .items {
   max-height: 120px;
   height: 120px;
 }
-.dark-heresy .combat .wounds .item-list .items .item .wound-row {
+.whfortyrp .combat .wounds .item-list .items .item .wound-row {
   flex-basis: 95%;
   align-items: center;
 }
-.dark-heresy .combat .wounds .item-list .items .item .wound-row .name {
+.whfortyrp .combat .wounds .item-list .items .item .wound-row .name {
   flex-basis: 60%;
   align-items: center;
 }
-.dark-heresy .combat .wounds .item-list .items .item .wound-row input {
+.whfortyrp .combat .wounds .item-list .items .item .wound-row input {
   flex-basis: 28%;
   margin: 1px 5px;
 }
-.dark-heresy .combat .wounds .information {
+.whfortyrp .combat .wounds .information {
   display: flex;
   margin-top: 5px;
 }
-.dark-heresy .combat .wounds .information label {
+.whfortyrp .combat .wounds .information label {
   flex-basis: 75%;
 }
-.dark-heresy .combat .wounds .information input {
+.whfortyrp .combat .wounds .information input {
   flex-basis: 25%;
 }
-.dark-heresy .combat .armour {
+.whfortyrp .combat .armour {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1318,324 +1325,324 @@ li.folder.collapsed > .folder-header {
   align-items: center;
   margin: 0 2px;
 }
-.dark-heresy .combat .armour .armour-row {
+.whfortyrp .combat .armour .armour-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-top: 5px;
   flex-basis: 100%;
 }
-.dark-heresy .combat .armour .armour-row .part {
+.whfortyrp .combat .armour .armour-row .part {
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-basis: 100%;
   justify-content: center;
 }
-.dark-heresy .combat .armour .armour-row .part .name {
+.whfortyrp .combat .armour .armour-row .part .name {
   flex-basis: 18%;
   font-size: 20px;
   text-align: center;
   font-family: var(--font-text);
   font-weight: bold;
 }
-.dark-heresy .combat .armour .armour-row .part .total {
+.whfortyrp .combat .armour .armour-row .part .total {
   font-size: 24px;
   height: 50px;
   width: 50px;
   margin: 1px;
 }
-.dark-heresy .combat .armour .armour-row .part .information {
+.whfortyrp .combat .armour .armour-row .part .information {
   display: flex;
   flex-direction: column;
 }
-.dark-heresy .combat .armour .armour-row .part .information input {
+.whfortyrp .combat .armour .armour-row .part .information input {
   height: 24px;
   width: 24px;
   margin: 1px;
   text-align: center;
 }
-.dark-heresy .combat .movement {
+.whfortyrp .combat .movement {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex-basis: 25%;
   justify-content: space-between;
 }
-.dark-heresy .combat .movement .information {
+.whfortyrp .combat .movement .information {
   display: flex;
   margin-top: 5px;
 }
-.dark-heresy .combat .movement .information label {
+.whfortyrp .combat .movement .information label {
   flex-basis: 75%;
 }
-.dark-heresy .combat .movement .information input {
+.whfortyrp .combat .movement .information input {
   text-align: center;
   flex-basis: 25%;
 }
-.dark-heresy .combat .movement .information select {
+.whfortyrp .combat .movement .information select {
   flex-basis: 45%;
 }
-.dark-heresy .combat .movement .information.initiative label {
+.whfortyrp .combat .movement .information.initiative label {
   flex-basis: 30%;
 }
-.dark-heresy .combat .weapons {
+.whfortyrp .combat .weapons {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: 2px;
   flex-basis: 100%;
 }
-.dark-heresy .combat .weapons .item-list .header {
+.whfortyrp .combat .weapons .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .combat .weapons .item-list .name {
+.whfortyrp .combat .weapons .item-list .name {
   flex-basis: 20%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .combat .weapons .item-list .class {
+.whfortyrp .combat .weapons .item-list .class {
   flex-basis: 10%;
   text-align: center;
 }
-.dark-heresy .combat .weapons .item-list .range {
+.whfortyrp .combat .weapons .item-list .range {
   flex-basis: 5%;
   text-align: center;
 }
-.dark-heresy .combat .weapons .item-list .rate-of-fire {
+.whfortyrp .combat .weapons .item-list .rate-of-fire {
   flex-basis: 10%;
   text-align: center;
 }
-.dark-heresy .combat .weapons .item-list .damage {
+.whfortyrp .combat .weapons .item-list .damage {
   flex-basis: 10%;
   text-align: center;
 }
-.dark-heresy .combat .weapons .item-list .type {
+.whfortyrp .combat .weapons .item-list .type {
   flex-basis: 5%;
   text-align: center;
 }
-.dark-heresy .combat .weapons .item-list .penetration {
+.whfortyrp .combat .weapons .item-list .penetration {
   flex-basis: 5%;
   text-align: center;
 }
-.dark-heresy .combat .weapons .item-list .clip {
+.whfortyrp .combat .weapons .item-list .clip {
   flex-basis: 5%;
   text-align: center;
 }
-.dark-heresy .combat .weapons .item-list .reload {
+.whfortyrp .combat .weapons .item-list .reload {
   flex-basis: 10%;
   text-align: center;
 }
-.dark-heresy .combat .weapons .item-list .special {
+.whfortyrp .combat .weapons .item-list .special {
   flex-basis: 20%;
   text-align: center;
 }
-.dark-heresy .combat .weapons .item-list .items .weapon {
+.whfortyrp .combat .weapons .item-list .items .weapon {
   width: 100%;
 }
-.dark-heresy .combat .weapons .item-list .items {
+.whfortyrp .combat .weapons .item-list .items {
   max-height: 100px;
   height: 100px;
 }
-.dark-heresy .combat .psychic-powers {
+.whfortyrp .combat .psychic-powers {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: 2px;
   flex-basis: 100%;
 }
-.dark-heresy .combat .psychic-powers .information {
+.whfortyrp .combat .psychic-powers .information {
   display: flex;
 }
-.dark-heresy .combat .psychic-powers .information .class {
+.whfortyrp .combat .psychic-powers .information .class {
   display: flex;
   flex-basis: 40%;
   align-self: center;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .combat .psychic-powers .information .class label {
+.whfortyrp .combat .psychic-powers .information .class label {
   flex-basis: 30%;
 }
-.dark-heresy .combat .psychic-powers .information .class select {
+.whfortyrp .combat .psychic-powers .information .class select {
   flex-basis: 40%;
 }
-.dark-heresy .combat .psychic-powers .information .rating,
-.dark-heresy .combat .psychic-powers .information .sustained {
+.whfortyrp .combat .psychic-powers .information .rating,
+.whfortyrp .combat .psychic-powers .information .sustained {
   display: flex;
   flex-basis: 30%;
   align-self: center;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .combat .psychic-powers .information .rating label,
-.dark-heresy .combat .psychic-powers .information .sustained label {
+.whfortyrp .combat .psychic-powers .information .rating label,
+.whfortyrp .combat .psychic-powers .information .sustained label {
   flex-basis: 30%;
 }
-.dark-heresy .combat .psychic-powers .information .rating input,
-.dark-heresy .combat .psychic-powers .information .sustained input {
+.whfortyrp .combat .psychic-powers .information .rating input,
+.whfortyrp .combat .psychic-powers .information .sustained input {
   flex-basis: 40%;
 }
-.dark-heresy .combat .psychic-powers .item-list .name {
+.whfortyrp .combat .psychic-powers .item-list .name {
   flex-basis: 20%;
   align-items: center;
 }
-.dark-heresy .combat .psychic-powers .item-list .action {
+.whfortyrp .combat .psychic-powers .item-list .action {
   flex-basis: 10%;
   text-align: center;
 }
-.dark-heresy .combat .psychic-powers .item-list .range {
+.whfortyrp .combat .psychic-powers .item-list .range {
   flex-basis: 10%;
   text-align: center;
 }
-.dark-heresy .combat .psychic-powers .item-list .sustained {
+.whfortyrp .combat .psychic-powers .item-list .sustained {
   flex-basis: 10%;
   text-align: center;
 }
-.dark-heresy .combat .psychic-powers .item-list .zone {
+.whfortyrp .combat .psychic-powers .item-list .zone {
   flex-basis: 10%;
   text-align: center;
 }
-.dark-heresy .combat .psychic-powers .item-list .damage {
+.whfortyrp .combat .psychic-powers .item-list .damage {
   flex-basis: 10%;
   text-align: center;
 }
-.dark-heresy .combat .psychic-powers .item-list .damage-type {
+.whfortyrp .combat .psychic-powers .item-list .damage-type {
   flex-basis: 5%;
   text-align: center;
 }
-.dark-heresy .combat .psychic-powers .item-list .penetration {
+.whfortyrp .combat .psychic-powers .item-list .penetration {
   flex-basis: 5%;
   text-align: center;
 }
-.dark-heresy .combat .psychic-powers .item-list .special {
+.whfortyrp .combat .psychic-powers .item-list .special {
   flex-basis: 20%;
   text-align: center;
 }
-.dark-heresy .combat .psychic-powers .item-list .items .psychic-power {
+.whfortyrp .combat .psychic-powers .item-list .items .psychic-power {
   width: 100%;
 }
-.dark-heresy .combat .psychic-powers .item-list .items {
+.whfortyrp .combat .psychic-powers .item-list .items {
   max-height: 141px;
   height: 141px;
 }
-.dark-heresy .abilities .talents,
-.dark-heresy .abilities .traits,
-.dark-heresy .abilities .special-abilities {
+.whfortyrp .abilities .talents,
+.whfortyrp .abilities .traits,
+.whfortyrp .abilities .special-abilities {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: 2px;
   flex-basis: 100%;
 }
-.dark-heresy .abilities .talents {
+.whfortyrp .abilities .talents {
   margin-top: 0;
 }
-.dark-heresy .abilities .talents .item-list .header,
-.dark-heresy .abilities .traits .item-list .header,
-.dark-heresy .abilities .special-abilities .item-list .header {
+.whfortyrp .abilities .talents .item-list .header,
+.whfortyrp .abilities .traits .item-list .header,
+.whfortyrp .abilities .special-abilities .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .abilities .talents .item-list .name,
-.dark-heresy .abilities .traits .item-list .name,
-.dark-heresy .abilities .special-abilities .item-list .name {
+.whfortyrp .abilities .talents .item-list .name,
+.whfortyrp .abilities .traits .item-list .name,
+.whfortyrp .abilities .special-abilities .item-list .name {
   flex-basis: 20%;
   text-align: center;
   align-items: center;
   font-weight: bold;
 }
-.dark-heresy .abilities .talents .item-list .benefit,
-.dark-heresy .abilities .traits .item-list .benefit,
-.dark-heresy .abilities .special-abilities .item-list .benefit {
+.whfortyrp .abilities .talents .item-list .benefit,
+.whfortyrp .abilities .traits .item-list .benefit,
+.whfortyrp .abilities .special-abilities .item-list .benefit {
   flex-basis: 73%;
   text-align: center;
 }
-.dark-heresy .abilities .talents .item-list .button,
-.dark-heresy .abilities .traits .item-list .button,
-.dark-heresy .abilities .special-abilities .item-list .button {
+.whfortyrp .abilities .talents .item-list .button,
+.whfortyrp .abilities .traits .item-list .button,
+.whfortyrp .abilities .special-abilities .item-list .button {
   flex-basis: 7%;
   text-align: center;
 }
-.dark-heresy .abilities .talents .item-list .items .talent,
-.dark-heresy .abilities .traits .item-list .items .trait,
-.dark-heresy .abilities .special-abilities .item-list .items .special-ability {
+.whfortyrp .abilities .talents .item-list .items .talent,
+.whfortyrp .abilities .traits .item-list .items .trait,
+.whfortyrp .abilities .special-abilities .item-list .items .special-ability {
   width: 100%;
 }
-.dark-heresy .abilities .talents .item-list .items {
+.whfortyrp .abilities .talents .item-list .items {
   max-height: 202px;
   height: 202px;
 }
-.dark-heresy .abilities .traits .item-list .items {
+.whfortyrp .abilities .traits .item-list .items {
   max-height: 175px;
   height: 175px;
 }
-.dark-heresy .abilities .special-abilities .item-list .items {
+.whfortyrp .abilities .special-abilities .item-list .items {
   max-height: 100px;
   height: 100px;
 }
-.dark-heresy .psychic .psychic-powers {
+.whfortyrp .psychic .psychic-powers {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex-basis: 100%;
 }
-.dark-heresy .psychic .psychic-powers .item-list .header {
+.whfortyrp .psychic .psychic-powers .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .psychic .psychic-powers .item-list .name {
+.whfortyrp .psychic .psychic-powers .item-list .name {
   flex-basis: 20%;
   text-align: center;
   align-items: center;
   font-weight: bold;
 }
-.dark-heresy .psychic .psychic-powers .item-list .short {
+.whfortyrp .psychic .psychic-powers .item-list .short {
   flex-basis: 73%;
   text-align: center;
 }
-.dark-heresy .psychic .psychic-powers .item-list .button {
+.whfortyrp .psychic .psychic-powers .item-list .button {
   flex-basis: 7%;
   text-align: center;
 }
-.dark-heresy .psychic .psychic-powers .item-list .items .psychic-power {
+.whfortyrp .psychic .psychic-powers .item-list .items .psychic-power {
   width: 100%;
 }
-.dark-heresy .psychic .psychic-powers .item-list .items {
+.whfortyrp .psychic .psychic-powers .item-list .items {
   max-height: 611px;
   height: 611px;
 }
-.dark-heresy .gear .encumbrance {
+.whfortyrp .gear .encumbrance {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 100%;
 }
-.dark-heresy .gear .encumbrance .information {
+.whfortyrp .gear .encumbrance .information {
   display: flex;
   margin-top: 5px;
   flex-basis: 100%;
   justify-content: space-evenly;
 }
-.dark-heresy .gear .encumbrance .information .max,
-.dark-heresy .gear .encumbrance .information .current {
+.whfortyrp .gear .encumbrance .information .max,
+.whfortyrp .gear .encumbrance .information .current {
   display: flex;
   align-self: center;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .encumbrance .information .max label,
-.dark-heresy .gear .encumbrance .information .current label {
+.whfortyrp .gear .encumbrance .information .max label,
+.whfortyrp .gear .encumbrance .information .current label {
   flex-basis: 30%;
   font-size: 22px;
   font-weight: bold;
 }
-.dark-heresy .gear .encumbrance .information .max input,
-.dark-heresy .gear .encumbrance .information .current input {
+.whfortyrp .gear .encumbrance .information .max input,
+.whfortyrp .gear .encumbrance .information .current input {
   font-size: 24px;
   height: 50px;
   width: 50px;
   margin-left: 10px;
 }
-.dark-heresy .gear .all-gear {
+.whfortyrp .gear .all-gear {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1646,115 +1653,115 @@ li.folder.collapsed > .folder-header {
   height: 581px;
   align-content: flex-start;
 }
-.dark-heresy .gear .all-gear .item-list .header {
+.whfortyrp .gear .all-gear .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .gear .all-gear .item-list .name {
+.whfortyrp .gear .all-gear .item-list .name {
   flex-basis: 30%;
   text-align: center;
   align-items: center;
   font-weight: bold;
 }
-.dark-heresy .gear .all-gear .item-list .installed {
+.whfortyrp .gear .all-gear .item-list .installed {
   flex-basis: 10%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .upgrade {
+.whfortyrp .gear .all-gear .item-list .upgrade {
   flex-basis: 50%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .class {
+.whfortyrp .gear .all-gear .item-list .class {
   flex-basis: 30%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .damage {
+.whfortyrp .gear .all-gear .item-list .damage {
   flex-basis: 10%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .type {
+.whfortyrp .gear .all-gear .item-list .type {
   flex-basis: 5%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .clip {
+.whfortyrp .gear .all-gear .item-list .clip {
   flex-basis: 10%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .weapon {
+.whfortyrp .gear .all-gear .item-list .weapon {
   flex-basis: 45%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .quantity {
+.whfortyrp .gear .all-gear .item-list .quantity {
   flex-basis: 10%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .part {
+.whfortyrp .gear .all-gear .item-list .part {
   flex-basis: 55%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .craftsmanship {
+.whfortyrp .gear .all-gear .item-list .craftsmanship {
   flex-basis: 55%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .short-description {
+.whfortyrp .gear .all-gear .item-list .short-description {
   flex-basis: 55%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .installed {
+.whfortyrp .gear .all-gear .item-list .installed {
   flex-basis: 10%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .cybernetic-craftsmanship {
+.whfortyrp .gear .all-gear .item-list .cybernetic-craftsmanship {
   flex-basis: 45%;
   text-align: center;
   align-items: center;
 }
-.dark-heresy .gear .all-gear .item-list .weight {
+.whfortyrp .gear .all-gear .item-list .weight {
   flex-basis: 10%;
   text-align: center;
 }
-.dark-heresy .gear .all-gear .item-list .button {
+.whfortyrp .gear .all-gear .item-list .button {
   flex-basis: 7%;
   text-align: center;
 }
-.dark-heresy .gear .all-gear .item-list .item {
+.whfortyrp .gear .all-gear .item-list .item {
   overflow-y: visible;
 }
-.dark-heresy .gear .all-gear .item-list .items .gear {
+.whfortyrp .gear .all-gear .item-list .items .gear {
   width: 100%;
 }
-.dark-heresy .progression .aptitudes {
+.whfortyrp .progression .aptitudes {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 25%;
   align-items: center;
 }
-.dark-heresy .progression .aptitudes .item-list .header {
+.whfortyrp .progression .aptitudes .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .progression .aptitudes .item-list .header .name {
+.whfortyrp .progression .aptitudes .item-list .header .name {
   flex-basis: 89%;
 }
-.dark-heresy .progression .aptitudes .item-list .items .aptitude {
+.whfortyrp .progression .aptitudes .item-list .items .aptitude {
   width: 100%;
 }
-.dark-heresy .progression .aptitudes .item-list .items {
+.whfortyrp .progression .aptitudes .item-list .items {
   max-height: 160px;
   height: 160px;
 }
-.dark-heresy .progression .aptitudes .item-list .items .item .name {
+.whfortyrp .progression .aptitudes .item-list .items .item .name {
   flex-basis: 90%;
   align-items: center;
   background: none;
@@ -1763,7 +1770,7 @@ li.folder.collapsed > .folder-header {
   font-size: 16px;
   padding: 0;
 }
-.dark-heresy .progression .aptitudes .item-list .items .item .name:focus {
+.whfortyrp .progression .aptitudes .item-list .items .item .name:focus {
   background: #d0d0d0;
   border-radius: 3px;
   border: 1px solid var(--color-border);
@@ -1774,7 +1781,7 @@ li.folder.collapsed > .folder-header {
   font-size: 12px;
   padding: 2px 4px;
 }
-.dark-heresy .progression .talents {
+.whfortyrp .progression .talents {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1782,118 +1789,120 @@ li.folder.collapsed > .folder-header {
   align-items: center;
   margin: 0 2px;
 }
-.dark-heresy .progression .talents .item-list .header {
+.whfortyrp .progression .talents .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .progression .talents .item-list .header .name {
+.whfortyrp .progression .talents .item-list .header .name {
   flex-basis: 64%;
 }
-.dark-heresy .progression .talents .item-list .header .cost {
+.whfortyrp .progression .talents .item-list .header .cost {
   flex-basis: 30%;
 }
-.dark-heresy .progression .talents .item-list .items .talent {
+.whfortyrp .progression .talents .item-list .items .talent {
   width: 100%;
 }
-.dark-heresy .progression .talents .item-list .items {
+.whfortyrp .progression .talents .item-list .items {
   max-height: 160px;
   height: 160px;
 }
-.dark-heresy .progression .talents .item-list .items .item .talent-row {
+.whfortyrp .progression .talents .item-list .items .item .talent-row {
   flex-basis: 64%;
   align-items: center;
 }
-.dark-heresy .progression .talents .item-list .items .item input {
+.whfortyrp .progression .talents .item-list .items .item input {
   flex-basis: 28%;
   margin: 1px 5px;
 }
-.dark-heresy .progression .aptitudes .item-list .items .item .aptitude-row {
+.whfortyrp .progression .aptitudes .item-list .items .item .aptitude-row {
   flex-basis: 90%;
   align-items: center;
 }
-.dark-heresy .progression .aptitudes .item-list .items .item input {
+.whfortyrp .progression .aptitudes .item-list .items .item input {
   flex-basis: 28%;
   margin: 1px 5px;
 }
-.dark-heresy .progression .experience {
+.whfortyrp .progression .experience {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex-basis: 30%;
+  margin-top: 2px;
+  margin-right: 1px;
 }
-.dark-heresy .progression .experience .information {
+.whfortyrp .progression .experience .information {
   display: flex;
   margin-top: 5px;
 }
-.dark-heresy .progression .experience .information label {
+.whfortyrp .progression .experience .information label {
   flex-basis: 75%;
 }
-.dark-heresy .progression .experience .information input {
+.whfortyrp .progression .experience .information input {
   flex-basis: 25%;
 }
-.dark-heresy .progression .characteristics {
+.whfortyrp .progression .characteristics {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin-right: 1px;
   margin-top: 2px;
 }
-.dark-heresy .progression .characteristics .item-list .header {
+.whfortyrp .progression .characteristics .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .progression .characteristics .item-list .header .name {
+.whfortyrp .progression .characteristics .item-list .header .name {
   flex-basis: 29%;
 }
-.dark-heresy .progression .characteristics .item-list .header .advance {
+.whfortyrp .progression .characteristics .item-list .header .advance {
   flex-basis: 25%;
   margin-right: 5px;
 }
-.dark-heresy .progression .characteristics .item-list .header .unnatural {
+.whfortyrp .progression .characteristics .item-list .header .unnatural {
   flex-basis: 13%;
   margin: 1px;
 }
-.dark-heresy .progression .characteristics .item-list .header .base {
+.whfortyrp .progression .characteristics .item-list .header .base {
   flex-basis: 11%;
   margin: 1px;
 }
-.dark-heresy .progression .characteristics .item-list .header .cost {
+.whfortyrp .progression .characteristics .item-list .header .cost {
   flex-basis: 15%;
   margin-left: 5px;
 }
-.dark-heresy .progression .characteristics .item-list .items {
-  max-height: 157px;
-  height: 157px;
+.whfortyrp .progression .characteristics .item-list .items {
+  max-height: 260px;
+  height: 260px;
 }
-.dark-heresy .progression .characteristics .item-list .items .item .name {
+.whfortyrp .progression .characteristics .item-list .items .item .name {
   flex-basis: 30%;
   font-size: 20px;
   text-align: center;
   font-weight: bold;
 }
-.dark-heresy .progression .characteristics .item-list .items .item .advance {
+.whfortyrp .progression .characteristics .item-list .items .item .advance {
   flex-basis: 25%;
   text-align: center;
   height: 22px;
   margin-right: 5px;
 }
-.dark-heresy .progression .characteristics .item-list .items .item .unnatural {
+.whfortyrp .progression .characteristics .item-list .items .item .unnatural {
   font-size: 12px;
   height: 24px;
   width: 40px;
   margin: 1px;
 }
-.dark-heresy .progression .characteristics .item-list .items .item .base {
+.whfortyrp .progression .characteristics .item-list .items .item .base {
   font-size: 12px;
   height: 24px;
   width: 40px;
   margin: 1px;
 }
-.dark-heresy .progression .characteristics .item-list .items .item .cost {
+.whfortyrp .progression .characteristics .item-list .items .item .cost {
   flex-basis: 15%;
   text-align: center;
   height: 22px;
   margin-left: 5px;
 }
-.dark-heresy .progression .psychic-powers {
+.whfortyrp .progression .psychic-powers {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1901,58 +1910,58 @@ li.folder.collapsed > .folder-header {
   margin-right: 1px;
   margin-top: 2px;
 }
-.dark-heresy .progression .psychic-powers .header {
+.whfortyrp .progression .psychic-powers .header {
   margin-top: 5px;
   display: flex;
 }
-.dark-heresy .progression .psychic-powers .header .class {
+.whfortyrp .progression .psychic-powers .header .class {
   display: flex;
   flex-basis: 50%;
   align-self: center;
 }
-.dark-heresy .progression .psychic-powers .header .class label {
+.whfortyrp .progression .psychic-powers .header .class label {
   flex-basis: 40%;
 }
-.dark-heresy .progression .psychic-powers .header .class select {
+.whfortyrp .progression .psychic-powers .header .class select {
   flex-basis: 60%;
 }
-.dark-heresy .progression .psychic-powers .header .rating {
+.whfortyrp .progression .psychic-powers .header .rating {
   display: flex;
   flex-basis: 50%;
   flex-direction: column;
   margin-left: 20px;
 }
-.dark-heresy .progression .psychic-powers .header .rating label {
+.whfortyrp .progression .psychic-powers .header .rating label {
   flex-basis: 70%;
 }
-.dark-heresy .progression .psychic-powers .header .rating input {
+.whfortyrp .progression .psychic-powers .header .rating input {
   flex-basis: 40%;
 }
-.dark-heresy .progression .psychic-powers .item-list .header {
+.whfortyrp .progression .psychic-powers .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .progression .psychic-powers .item-list .header .name {
+.whfortyrp .progression .psychic-powers .item-list .header .name {
   flex-basis: 64%;
 }
-.dark-heresy .progression .psychic-powers .item-list .header .cost {
+.whfortyrp .progression .psychic-powers .item-list .header .cost {
   flex-basis: 30%;
 }
-.dark-heresy .progression .psychic-powers .item-list .items .psychic-power {
+.whfortyrp .progression .psychic-powers .item-list .items .psychic-power {
   width: 100%;
 }
-.dark-heresy .progression .psychic-powers .item-list .items {
-  max-height: 107px;
-  height: 107px;
+.whfortyrp .progression .psychic-powers .item-list .items {
+  max-height: 125px;
+  height: 125px;
 }
-.dark-heresy .progression .psychic-powers .item-list .items .item .psychic-powers-row {
+.whfortyrp .progression .psychic-powers .item-list .items .item .psychic-powers-row {
   flex-basis: 64%;
   align-items: center;
 }
-.dark-heresy .progression .psychic-powers .item-list .items .item input {
+.whfortyrp .progression .psychic-powers .item-list .items .item input {
   flex-basis: 28%;
   margin: 1px 5px;
 }
-.dark-heresy .progression .skills {
+.whfortyrp .progression .skills {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1960,94 +1969,94 @@ li.folder.collapsed > .folder-header {
   margin-left: 1px;
   margin-top: 2px;
 }
-.dark-heresy .progression .skills .item-list .header {
+.whfortyrp .progression .skills .item-list .header {
   margin-top: 5px;
 }
-.dark-heresy .progression .skills .item-list .header .name {
+.whfortyrp .progression .skills .item-list .header .name {
   flex-basis: 40%;
 }
-.dark-heresy .progression .skills .item-list .header .advance {
+.whfortyrp .progression .skills .item-list .header .advance {
   flex-basis: 25%;
   margin-right: 5px;
 }
-.dark-heresy .progression .skills .item-list .header .total {
+.whfortyrp .progression .skills .item-list .header .total {
   flex-basis: 11%;
   margin: 1px;
 }
-.dark-heresy .progression .skills .item-list .header .cost {
+.whfortyrp .progression .skills .item-list .header .cost {
   flex-basis: 15%;
   margin-left: 5px;
 }
-.dark-heresy .progression .skills .item-list .items {
-  max-height: 382px;
-  height: 382px;
+.whfortyrp .progression .skills .item-list .items {
+  max-height: 605px;
+  height: 605px;
 }
-.dark-heresy .progression .skills .item-list .items .item .name {
+.whfortyrp .progression .skills .item-list .items .item .name {
   flex-basis: 40%;
   font-size: 20px;
   text-align: center;
   font-weight: bold;
 }
-.dark-heresy .progression .skills .item-list .items .item .advance {
+.whfortyrp .progression .skills .item-list .items .item .advance {
   flex-basis: 25%;
   text-align: center;
   height: 22px;
   margin-right: 5px;
 }
-.dark-heresy .progression .skills .item-list .items .item .total {
+.whfortyrp .progression .skills .item-list .items .item .total {
   font-size: 12px;
   height: 24px;
   width: 40px;
   margin: 1px;
 }
-.dark-heresy .progression .skills .item-list .items .item .cost {
+.whfortyrp .progression .skills .item-list .items .item .cost {
   flex-basis: 15%;
   text-align: center;
   height: 22px;
   margin-left: 5px;
 }
-.dark-heresy .notes-tab .notes-editor {
+.whfortyrp .notes-tab .notes-editor {
   margin-top: 2px;
   height: 476px;
 }
-.dark-heresy .notes-tab .information {
+.whfortyrp .notes-tab .information {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 100%;
 }
-.dark-heresy .notes-tab .information .information-row {
+.whfortyrp .notes-tab .information .information-row {
   align-items: baseline;
   display: flex;
   flex-direction: row;
   margin: 5px 0;
 }
-.dark-heresy .notes-tab .information .full {
+.whfortyrp .notes-tab .information .full {
   flex-basis: 100%;
 }
-.dark-heresy .notes-tab .information .information-row .wrapper {
+.whfortyrp .notes-tab .information .information-row .wrapper {
   display: flex;
   align-items: center;
 }
-.dark-heresy .notes-tab .information .information-row .margin {
+.whfortyrp .notes-tab .information .information-row .margin {
   margin-left: 14px;
 }
-.dark-heresy .notes-tab .information .information-row input {
+.whfortyrp .notes-tab .information .information-row input {
   margin-left: 8px;
 }
-.dark-heresy .notes-tab .information .information-row .age input {
+.whfortyrp .notes-tab .information .information-row .age input {
   width: 2em;
   text-align: center;
 }
-.dark-heresy .notes-tab .information .information-row .gender input,
-.dark-heresy .notes-tab .information .information-row .build input,
-.dark-heresy .notes-tab .information .information-row .complexion input,
-.dark-heresy .notes-tab .information .information-row .hair input {
+.whfortyrp .notes-tab .information .information-row .gender input,
+.whfortyrp .notes-tab .information .information-row .build input,
+.whfortyrp .notes-tab .information .information-row .complexion input,
+.whfortyrp .notes-tab .information .information-row .hair input {
   width: 8em;
 }
-.dark-heresy .notes-tab .information .information-row .divination label,
-.dark-heresy .notes-tab .information .information-row .quirks label,
-.dark-heresy .notes-tab .information .information-row .superstition label,
-.dark-heresy .notes-tab .information .information-row .momentos label {
+.whfortyrp .notes-tab .information .information-row .divination label,
+.whfortyrp .notes-tab .information .information-row .quirks label,
+.whfortyrp .notes-tab .information .information-row .superstition label,
+.whfortyrp .notes-tab .information .information-row .momentos label {
   flex-basis: 10%;
 }

@@ -1,10 +1,10 @@
-import { DarkHeresyItemSheet } from "./item.js";
+import { WHFortyRPItemSheet } from "./item.js";
 
-export class ForceFieldSheet extends DarkHeresyItemSheet {
+export class ForceFieldSheet extends WHFortyRPItemSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["dark-heresy", "sheet", "force-field"],
-      template: "systems/dark-heresy/template/sheet/force-field.html",
+      classes: ["whfortyrp", "sheet", "force-field"],
+      template: "systems/whfortyrp/template/sheet/force-field.html",
       width: 500,
       height: 369,
       resizable: false,

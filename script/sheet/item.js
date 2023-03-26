@@ -1,15 +1,20 @@
-export class DarkHeresyItemSheet extends ItemSheet {
+export class WHFortyRPItemSheet extends ItemSheet {
   activateListeners(html) {
     super.activateListeners(html);
     html.find("input").focusin(ev => this._onFocusIn(ev));
   }
 
-  getData() {
+  async getData() {
     let data = super.getData();
-    return {
-      item: data.item,
-      system: data.data.system
-    };
+    data.enrichment = await this._handleEnrichment();
+    return data;
+  }
+
+  async _handleEnrichment() {
+    let enrichment = {};
+    enrichment["system.description"] = await TextEditor.enrichHTML(this.item.system.description, { async: true });
+
+    return expandObject(enrichment);
   }
 
   _getHeaderButtons() {

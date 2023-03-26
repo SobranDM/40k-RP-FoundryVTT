@@ -1,6 +1,6 @@
 {
-  "id": "dark-heresy",
-  "title": "Dark Heresy 2E",
+  "id": "whfortyrp",
+  "title": "Warhammer 40k Roleplaying",
   "description": "Innocence proves nothing",
   "version": "4.1.2",
   "minimumCoreVersion" : 10,
@@ -16,13 +16,13 @@
     "script/common/hooks.js"
   ],
   "styles": [
-    "css/dark-heresy.css"
+    "css/whfortyrp.css"
   ],
   "packs": [
     {
       "name": "character-aptitudes",
       "label": "Character Aptitudes",
-      "system": "dark-heresy",
+      "system": "whfortyrp",
       "path": "./packs/character/aptitudes.db",
       "entity": "Item"
     }
@@ -53,9 +53,9 @@
   "gridUnits": "m",
   "primaryTokenAttribute": null,
   "secondaryTokenAttribute": null,
-  "url": "https://github.com/moo-man/DarkHeresy2E-FoundryVTT",
+  "url": "https://github.com/moo-man/WHFortyRP2E-FoundryVTT",
   "socket": true,
-  "manifest": "https://github.com/moo-man/DarkHeresy2E-FoundryVTT/releases/download/4.1.2/system.json",
-  "download": "https://github.com/moo-man/DarkHeresy2E-FoundryVTT/releases/download/4.1.2/dark-heresy.zip",
+  "manifest": "https://github.com/moo-man/WHFortyRP2E-FoundryVTT/releases/download/4.1.2/system.json",
+  "download": "https://github.com/moo-man/WHFortyRP2E-FoundryVTT/releases/download/4.1.2/whfortyrp.zip",
   "license": "LICENSE.txt"
 }

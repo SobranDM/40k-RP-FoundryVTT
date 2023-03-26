@@ -1,18 +1,16 @@
-export class DarkHeresyActor extends Actor {
-
+export class WHFortyRPActor extends Actor {
   async _preCreate(data, options, user) {
-    
     let initData = {
       "prototypeToken.bar1": { attribute: "wounds" },
       "prototypeToken.bar2": { attribute: "fate" },
       "prototypeToken.name": data.name,
-      "prototypeToken.displayName" : CONST.TOKEN_DISPLAY_MODES.OWNER_HOVER,
-      "prototypeToken.displayBars" : CONST.TOKEN_DISPLAY_MODES.OWNER_HOVER,
-            
+      "prototypeToken.displayName": CONST.TOKEN_DISPLAY_MODES.OWNER_HOVER,
+      "prototypeToken.displayBars": CONST.TOKEN_DISPLAY_MODES.OWNER_HOVER,
     };
     if (data.type === "acolyte") {
-      initData["prototypeToken.actorLink"] = true;      
-      initData["prototypeToken.disposition"] = CONST.TOKEN_DISPOSITIONS.FRIENDLY
+      initData["prototypeToken.actorLink"] = true;
+      initData["prototypeToken.disposition"] =
+        CONST.TOKEN_DISPOSITIONS.FRIENDLY;
     }
     this.updateSource(initData);
   }
@@ -32,32 +30,40 @@ export class DarkHeresyActor extends Actor {
     let i = 0;
     for (let characteristic of Object.values(this.characteristics)) {
       characteristic.total = characteristic.base + characteristic.advance;
-      characteristic.bonus = Math.floor(characteristic.total / 10) + characteristic.unnatural;
+      characteristic.bonus =
+        Math.floor(characteristic.total / 10) + characteristic.unnatural;
       if (this.fatigue.value > characteristic.bonus) {
         characteristic.total = Math.ceil(characteristic.total / 2);
-        characteristic.bonus = Math.floor(characteristic.total / 10) + characteristic.unnatural;
+        characteristic.bonus =
+          Math.floor(characteristic.total / 10) + characteristic.unnatural;
       }
       characteristic.isLeft = i < middle;
       characteristic.isRight = i >= middle;
-      characteristic.advanceCharacteristic = this._getAdvanceCharacteristic(characteristic.advance);
+      characteristic.advanceCharacteristic = this._getAdvanceCharacteristic(
+        characteristic.advance
+      );
       i++;
     }
     this.system.insanityBonus = Math.floor(this.insanity / 10);
     this.system.corruptionBonus = Math.floor(this.corruption / 10);
     this.psy.currentRating = this.psy.rating - this.psy.sustained;
-    this.initiative.bonus = this.characteristics[this.initiative.characteristic].bonus;
+    this.initiative.bonus =
+      this.characteristics[this.initiative.characteristic].bonus;
     // Done as variables to make it easier to read & understand
     let tb = Math.floor(
-      ( this.characteristics.toughness.base
-            + this.characteristics.toughness.advance) / 10);
+      (this.characteristics.toughness.base +
+        this.characteristics.toughness.advance) /
+      10
+    );
 
     let wb = Math.floor(
-      ( this.characteristics.willpower.base
-            + this.characteristics.willpower.advance) / 10);
+      (this.characteristics.willpower.base +
+        this.characteristics.willpower.advance) /
+      10
+    );
 
     // The only thing not affected by itself
     this.fatigue.max = tb + wb;
-
   }
 
   _computeSkills() {
@@ -79,7 +85,6 @@ export class DarkHeresyActor extends Actor {
   _computeItems() {
     let encumbrance = 0;
     for (let item of this.items) {
-
       if (item.weight) {
         encumbrance = encumbrance + item.weight;
       }
@@ -111,11 +116,13 @@ export class DarkHeresyActor extends Actor {
         this.experience.spentPsychicPowers += parseInt(item.cost, 10);
       }
     }
-    this.experience.totalSpent = this.experience.spentCharacteristics
-      + this.experience.spentSkills
-      + this.experience.spentTalents
-      + this.experience.spentPsychicPowers;
-    this.experience.remaining = this.experience.value - this.experience.totalSpent;
+    this.experience.totalSpent =
+      this.experience.spentCharacteristics +
+      this.experience.spentSkills +
+      this.experience.spentTalents +
+      this.experience.spentPsychicPowers;
+    this.experience.remaining =
+      this.experience.value - this.experience.totalSpent;
   }
 
   _computeArmour() {
@@ -123,43 +130,45 @@ export class DarkHeresyActor extends Actor {
 
     let toughness = this.characteristics.toughness;
 
-    this.system.armour = locations
-              .reduce((accumulator, location) =>
-                Object.assign(accumulator,
-                  {
-                    [location]: {
-                      total: toughness.bonus,
-                      toughnessBonus: toughness.bonus,
-                      value: 0
-                    }
-                  }), {});
+    this.system.armour = locations.reduce(
+      (accumulator, location) =>
+        Object.assign(accumulator, {
+          [location]: {
+            total: toughness.bonus,
+            toughnessBonus: toughness.bonus,
+            value: 0,
+          },
+        }),
+      {}
+    );
 
     // Object for storing the max armour
-    let maxArmour = locations
-      .reduce((acc, location) =>
-        Object.assign(acc, { [location]: 0 }), {});
+    let maxArmour = locations.reduce(
+      (acc, location) => Object.assign(acc, { [location]: 0 }),
+      {}
+    );
 
     // For each item, find the maximum armour val per location
     this.items
-      .filter(item => item.isArmour && !item.isAdditive)
+      .filter((item) => item.isArmour && !item.isAdditive)
       .reduce((acc, armour) => {
-        locations.forEach(location => {
-            let armourVal = armour.part[location] || 0;
-            if (armourVal > acc[location]) {
-              acc[location] = armourVal;
-            }
-          });
+        locations.forEach((location) => {
+          let armourVal = armour.part[location] || 0;
+          if (armourVal > acc[location]) {
+            acc[location] = armourVal;
+          }
+        });
         return acc;
       }, maxArmour);
 
     this.items
-      .filter(item => item.isArmour && item.isAdditive)
-      .forEach(armour => {
-         locations.forEach(location =>{
-            let armourVal = armour.part[location] || 0;
-            maxArmour[location] += armourVal;
-         });
-      });  
+      .filter((item) => item.isArmour && item.isAdditive)
+      .forEach((armour) => {
+        locations.forEach((location) => {
+          let armourVal = armour.part[location] || 0;
+          maxArmour[location] += armourVal;
+        });
+      });
 
     this.armour.head.value = maxArmour.head;
     this.armour.leftArm.value = maxArmour.leftArm;
@@ -183,8 +192,28 @@ export class DarkHeresyActor extends Actor {
       half: agility.bonus + size - 4,
       full: (agility.bonus + size - 4) * 2,
       charge: (agility.bonus + size - 4) * 3,
-      run: (agility.bonus + size - 4) * 6
+      run: (agility.bonus + size - 4) * 6,
     };
+  }
+
+  _onItemSummary(event) {
+    event.preventDefault();
+    let li = $(event.currentTarget).parents(".item");
+    let item = this.actor.items.get(li.data("item-id"));
+    let description = item.system.enrichedDescription;
+    // Toggle summary
+    if (li.hasClass("expanded")) {
+      let summary = li.parents(".item-entry").children(".item-summary");
+      summary.slideUp(200, () => summary.remove());
+    } else {
+      // Add item tags
+      let div = $(
+        `<div class="item-summary"><ol class="tag-list">${item.getTags()}</ol><div>${description}</div></div>`
+      );
+      li.parents(".item-entry").append(div.hide());
+      div.slideDown(200);
+    }
+    li.toggleClass("expanded");
   }
 
   _findCharacteristic(short) {
@@ -197,10 +226,12 @@ export class DarkHeresyActor extends Actor {
   }
 
   _computeEncumbrance(encumbrance) {
-    const attributeBonus = this.characteristics.strength.bonus + this.characteristics.toughness.bonus;
+    const attributeBonus =
+      this.characteristics.strength.bonus +
+      this.characteristics.toughness.bonus;
     this.system.encumbrance = {
       max: 0,
-      value: encumbrance
+      value: encumbrance,
     };
     switch (attributeBonus) {
       case 0:
@@ -272,9 +303,7 @@ export class DarkHeresyActor extends Actor {
     }
   }
 
-
-  _getAdvanceCharacteristic(characteristic)
-  {
+  _getAdvanceCharacteristic(characteristic) {
     switch (characteristic || 0) {
       case 0:
         return "N";
@@ -293,8 +322,7 @@ export class DarkHeresyActor extends Actor {
     }
   }
 
-  _getAdvanceSkill(skill)
-  {
+  _getAdvanceSkill(skill) {
     switch (skill || 0) {
       case -20:
         return "U";
@@ -331,9 +359,15 @@ export class DarkHeresyActor extends Actor {
     // Apply damage from multiple hits
     for (const damage of damages) {
       // Get the armour for the location and minus penetration, no negatives
-      let armour = Math.max(this._getArmour(damage.location) - Number(damage.penetration), 0);
+      let armour = Math.max(
+        this._getArmour(damage.location) - Number(damage.penetration),
+        0
+      );
       // Reduce damage by toughness bonus
-      const damageMinusToughness = Math.max(Number(damage.amount) - this.system.characteristics.toughness.bonus, 0);
+      const damageMinusToughness = Math.max(
+        Number(damage.amount) - this.system.characteristics.toughness.bonus,
+        0
+      );
 
       // Calculate wounds to add, reducing damage by armour after pen
       let woundsToAdd = Math.max(damageMinusToughness - armour, 0);
@@ -343,7 +377,12 @@ export class DarkHeresyActor extends Actor {
         woundsToAdd = 1;
       } else if (damage.righteousFury) {
         // Roll on crit table but don't add critical wounds
-        this._recordDamage(damageTaken, damage.righteousFury, damage, "Critical Effect (RF)");
+        this._recordDamage(
+          damageTaken,
+          damage.righteousFury,
+          damage,
+          "Critical Effect (RF)"
+        );
       }
 
       // Check for critical wounds
@@ -351,12 +390,11 @@ export class DarkHeresyActor extends Actor {
         // All new wounds are critical
         criticalWounds += woundsToAdd;
         this._recordDamage(damageTaken, woundsToAdd, damage, "Critical");
-
       } else if (wounds + woundsToAdd > maxWounds) {
         // Will bring wounds to max and add left overs as crits
         this._recordDamage(damageTaken, maxWounds - wounds, damage, "Wounds");
 
-        woundsToAdd = (wounds + woundsToAdd) - maxWounds;
+        woundsToAdd = wounds + woundsToAdd - maxWounds;
         criticalWounds += woundsToAdd;
         wounds = maxWounds;
         this._recordDamage(damageTaken, woundsToAdd, damage, "Critical");
@@ -369,16 +407,20 @@ export class DarkHeresyActor extends Actor {
     // Update the Actor
     const updates = {
       "system.wounds.value": wounds,
-      "system.wounds.critical": criticalWounds
+      "system.wounds.critical": criticalWounds,
     };
 
     // Delegate damage application to a hook
-    const allowed = Hooks.call("modifyTokenAttribute", {
-      attribute: "wounds.value",
-      value: this.wounds.value,
-      isDelta: false,
-      isBar: true
-    }, updates);
+    const allowed = Hooks.call(
+      "modifyTokenAttribute",
+      {
+        attribute: "wounds.value",
+        value: this.wounds.value,
+        isDelta: false,
+        isBar: true,
+      },
+      updates
+    );
 
     await this._showCritMessage(damageTaken, this.name, wounds, criticalWounds);
     return allowed !== false ? this.update(updates) : this;
@@ -402,7 +444,7 @@ export class DarkHeresyActor extends Actor {
       damage,
       source,
       location: damageObject.location,
-      type: damageObject.type
+      type: damageObject.type,
     });
   }
 
@@ -444,61 +486,106 @@ export class DarkHeresyActor extends Actor {
    */
   async _showCritMessage(rolls, target, totalWounds, totalCritWounds) {
     if (rolls.length === 0) return;
-    const html = await renderTemplate("systems/dark-heresy/template/chat/critical.html", {
-      rolls,
-      target,
-      totalWounds,
-      totalCritWounds
-    });
+    const html = await renderTemplate(
+      "systems/whfortyrp/template/chat/critical.html",
+      {
+        rolls,
+        target,
+        totalWounds,
+        totalCritWounds,
+      }
+    );
     ChatMessage.create({ content: html });
   }
-  
+
   get attributeBoni() {
     let boni = [];
     for (let characteristic of Object.values(this.characteristics)) {
-      boni.push( {regex: new RegExp(`${characteristic.short}B`, "gi"), value: characteristic.bonus} );
+      boni.push({
+        regex: new RegExp(`${characteristic.short}B`, "gi"),
+        value: characteristic.bonus,
+      });
     }
     return boni;
   }
 
-  get characteristics() {return this.system.characteristics;}
+  get characteristics() {
+    return this.system.characteristics;
+  }
 
-  get skills() {return this.system.skills;}
+  get skills() {
+    return this.system.skills;
+  }
 
-  get initiative() {return this.system.initiative;}
+  get initiative() {
+    return this.system.initiative;
+  }
 
-  get wounds() {return this.system.wounds;}
+  get wounds() {
+    return this.system.wounds;
+  }
 
-  get fatigue() {return this.system.fatigue;}
+  get fatigue() {
+    return this.system.fatigue;
+  }
 
-  get fate() {return this.system.fate;}
+  get fate() {
+    return this.system.fate;
+  }
 
-  get psy() {return this.system.psy;}
+  get psy() {
+    return this.system.psy;
+  }
 
-  get bio() {return this.system.bio;}
+  get bio() {
+    return this.system.bio;
+  }
 
-  get experience() {return this.system.experience;}
+  get experience() {
+    return this.system.experience;
+  }
 
-  get insanity() {return this.system.insanity;}
+  get insanity() {
+    return this.system.insanity;
+  }
 
-  get corruption() {return this.system.corruption;}
+  get corruption() {
+    return this.system.corruption;
+  }
 
-  get aptitudes() {return this.system.aptitudes;}
+  get aptitudes() {
+    return this.system.aptitudes;
+  }
 
-  get size() {return this.system.size;}
+  get size() {
+    return this.system.size;
+  }
 
-  get faction() {return this.system.faction;}
+  get faction() {
+    return this.system.faction;
+  }
 
-  get subfaction() {return this.system.subfaction;}
+  get subfaction() {
+    return this.system.subfaction;
+  }
 
-  get subtype() {return this.system.type;}
+  get subtype() {
+    return this.system.type;
+  }
 
-  get threatLevel() {return this.system.threatLevel;}
+  get threatLevel() {
+    return this.system.threatLevel;
+  }
 
-  get armour() {return this.system.armour;}
+  get armour() {
+    return this.system.armour;
+  }
 
-  get encumbrance() {return this.system.encumbrance;}
+  get encumbrance() {
+    return this.system.encumbrance;
+  }
 
-  get movement() {return this.system.movement;}
-
+  get movement() {
+    return this.system.movement;
+  }
 }
