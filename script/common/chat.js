@@ -8,7 +8,7 @@ import { commonRoll, combatRoll } from "./roll.js";
  *
  * @returns {Array}              The extended options Array including new context choices
  */
-export const addChatMessageContextOptions = function(html, options) {
+export const addChatMessageContextOptions = function (html, options) {
   let canApply = li => {
     const message = game.messages.get(li.data("messageId"));
     return message.getRollData()?.isCombatTest && message.isContentVisible && canvas.tokens.controlled.length;
@@ -21,23 +21,23 @@ export const addChatMessageContextOptions = function(html, options) {
       callback: li => applyChatCardDamage(li)
     }
   );
-  
+
   let canReroll = li => {
-      const message = game.messages.get(li.data("messageId"));
-      let actor = game.actors.get(message.getRollData()?.ownerId);
-      return message.isRoll && message.isContentVisible && actor?.fate.value > 0;
+    const message = game.messages.get(li.data("messageId"));
+    let actor = game.actors.get(message.getRollData()?.ownerId);
+    return message.isRoll && message.isContentVisible && actor?.infamy.value > 0;
   };
-  
+
   options.push(
-      {
-          name: game.i18n.localize("CHAT.CONTEXT.REROLL"),
-          icon: '<i class="fa-solid fa-repeat"></i>',
-          condition: canReroll,
-          callback: li => {
-              const message = game.messages.get(li.data("messageId"));              
-              rerollTest(message.getRollData());
-          } 
+    {
+      name: game.i18n.localize("CHAT.CONTEXT.REROLL"),
+      icon: '<i class="fa-solid fa-repeat"></i>',
+      condition: canReroll,
+      callback: li => {
+        const message = game.messages.get(li.data("messageId"));
+        rerollTest(message.getRollData());
       }
+    }
   )
   return options;
 };
@@ -78,22 +78,22 @@ function applyChatCardDamage(roll, multiplier) {
 }
 
 function rerollTest(rollData) {
-    let actor = game.actors.get(rollData.ownerId);    
-    actor.update({ "system.fate.value" : actor.fate.value -1 });
-    delete rollData.damages; //reset so no old data is shown on failure
-    
-    rollData.isReRoll = true;
-    if(rollData.isCombatTest) {
-        //All the regexes in this are broken once retrieved from the chatmessage
-        //No idea why this happens so we need to fetch them again so the roll works correctly
-        rollData.attributeBoni = actor.attributeBoni;
-        return combatRoll(rollData);
-    } else {
-        return commonRoll(rollData);
-    }
+  let actor = game.actors.get(rollData.ownerId);
+  actor.update({ "system.fate.value": actor.fate.value - 1 });
+  delete rollData.damages; //reset so no old data is shown on failure
+
+  rollData.isReRoll = true;
+  if (rollData.isCombatTest) {
+    //All the regexes in this are broken once retrieved from the chatmessage
+    //No idea why this happens so we need to fetch them again so the roll works correctly
+    rollData.attributeBoni = actor.attributeBoni;
+    return combatRoll(rollData);
+  } else {
+    return commonRoll(rollData);
+  }
 }
 
-export const showRolls =html => {
+export const showRolls = html => {
   // Show dice rolls on click
   html.on("click", ".whfortyrp.chat.roll>.background.border", onChatRollClick);
 };
@@ -106,6 +106,6 @@ function onChatRollClick(event) {
   event.preventDefault();
   let roll = $(event.currentTarget.parentElement);
   let tip = roll.find(".dice-rolls");
-  if ( !tip.is(":visible") ) tip.slideDown(200);
+  if (!tip.is(":visible")) tip.slideDown(200);
   else tip.slideUp(200);
 }
