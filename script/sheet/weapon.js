@@ -5,8 +5,8 @@ export class WeaponSheet extends WHFortyRPItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["whfortyrp", "sheet", "weapon"],
       template: "systems/whfortyrp/template/sheet/weapon.html",
-      width: 500,
-      height: 369,
+      width: 550,
+      height: 605,
       resizable: false,
       tabs: [
         {

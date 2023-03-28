@@ -5,8 +5,8 @@ export class ArmourSheet extends WHFortyRPItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["whfortyrp", "sheet", "armour"],
       template: "systems/whfortyrp/template/sheet/armour.html",
-      width: 500,
-      height: 369,
+      width: 550,
+      height: 605,
       resizable: false,
       tabs: [
         {

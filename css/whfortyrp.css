@@ -53,6 +53,27 @@
 .whfortyrp .justify-center {
   justify-content: center;
 }
+.whfortyrp .editor-content {
+  padding-left: 4px;
+  padding-right: 4px;
+  text-align: left;
+  width: 100%;
+}
+.whfortyrp textarea {
+  background: #c1908161;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  box-shadow: inset 0 0 6px #7b3000;
+  color: var(--color-text);
+  font-family: var(--font-text);
+  font-size: 14px;
+  height: auto;
+  line-height: 16px;
+  margin: 4px;
+  padding: 2px 4px;
+  width: 480px;
+  height: 100px;
+}
 /* TAB COLORS */
 #sidebar-tabs > .item {
   line-height: 31px;
@@ -398,23 +419,23 @@ li.folder.collapsed > .folder-header {
   margin-left: 8px;
 }
 .whfortyrp.mental-disorder .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.malignancy .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.mutation .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.talent .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.talent .stats {
-  height: 165px;
+  height: 400px;
   align-content: baseline;
 }
 .whfortyrp.talent .stats .stats-row .stat.prerequisites input {
@@ -428,29 +449,32 @@ li.folder.collapsed > .folder-header {
   width: 416px;
 }
 .whfortyrp.talent .stats .stats-row .stat.benefit input {
-  width: 428px;
+  width: 475px;
+  height: 100px;
 }
 .whfortyrp.trait .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.trait .stats {
-  height: 165px;
+  height: 400px;
   align-content: baseline;
 }
 .whfortyrp.trait .stats .stats-row .stat.benefit input {
-  width: 428px;
+  width: 475px;
+  height: 100px;
 }
 .whfortyrp.special-ability .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.special-ability .stats {
-  height: 165px;
+  height: 400px;
   align-content: baseline;
 }
 .whfortyrp.special-ability .stats .stats-row .stat.benefit input {
-  width: 428px;
+  width: 475px;
+  height: 100px;
 }
 .whfortyrp.psychic-power .notes-editor {
   height: 193px;
@@ -510,8 +534,8 @@ li.folder.collapsed > .folder-header {
   width: 372px;
 }
 .whfortyrp.critical-injury .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.critical-injury .header .part,
 .whfortyrp.critical-injury .header .type {
@@ -522,8 +546,8 @@ li.folder.collapsed > .folder-header {
   margin: 0 8px;
 }
 .whfortyrp.weapon .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.weapon .stats .stats-row .stat.class select {
   width: 5em;
@@ -579,8 +603,8 @@ li.folder.collapsed > .folder-header {
   width: 29em;
 }
 .whfortyrp.armour .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.armour .stats .stats-row .stat.type input {
   width: 8em;
@@ -604,11 +628,11 @@ li.folder.collapsed > .folder-header {
   text-align: center;
 }
 .whfortyrp.gear .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.gear .stats {
-  height: 165px;
+  height: 400px;
   align-content: baseline;
 }
 .whfortyrp.gear .stats .stats-row .stat.craftsmanship select {
@@ -625,11 +649,11 @@ li.folder.collapsed > .folder-header {
   width: 31em;
 }
 .whfortyrp.drug .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.drug .stats {
-  height: 165px;
+  height: 400px;
   align-content: baseline;
 }
 .whfortyrp.drug .stats .stats-row .stat.craftsmanship select {
@@ -646,11 +670,11 @@ li.folder.collapsed > .folder-header {
   width: 31em;
 }
 .whfortyrp.tool .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.tool .stats {
-  height: 165px;
+  height: 400px;
   align-content: baseline;
 }
 .whfortyrp.tool .stats .stats-row .stat.craftsmanship select {
@@ -667,11 +691,11 @@ li.folder.collapsed > .folder-header {
   width: 31em;
 }
 .whfortyrp.cybernetic .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.cybernetic .stats {
-  height: 165px;
+  height: 400px;
   align-content: baseline;
 }
 .whfortyrp.cybernetic .stats .stats-row .stat.craftsmanship select {
@@ -685,11 +709,11 @@ li.folder.collapsed > .folder-header {
   text-align: center;
 }
 .whfortyrp.weapon-modification .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.weapon-modification .stats {
-  height: 165px;
+  height: 400px;
   align-content: baseline;
 }
 .whfortyrp.weapon-modification .stats .stats-row .stat.craftsmanship select {
@@ -706,8 +730,8 @@ li.folder.collapsed > .folder-header {
   width: 330px;
 }
 .whfortyrp.ammunition .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.ammunition .stats .stats-row .stat.weapon input {
   width: 26em;
@@ -746,11 +770,11 @@ li.folder.collapsed > .folder-header {
   width: 427px;
 }
 .whfortyrp.force-field .notes-editor {
-  height: 165px;
-  max-height: 165px;
+  height: 395px;
+  max-height: 395px;
 }
 .whfortyrp.force-field .stats {
-  height: 165px;
+  height: 400px;
   align-content: baseline;
 }
 .whfortyrp.force-field .stats .stats-row .stat.protection-rating input {
@@ -855,7 +879,7 @@ li.folder.collapsed > .folder-header {
 .whfortyrp input[type="number"],
 .whfortyrp input[type="text"],
 .whfortyrp select,
-.whfortyrp textarea {
+.whfortyrp .actor textarea {
   background: #c1908161;
   border: 1px solid var(--color-border);
   border-radius: 3px;
@@ -2021,10 +2045,10 @@ li.folder.collapsed > .folder-header {
   height: 550px;
 }
 .whfortyrp .notes-tab .notes-editor .editor-content {
-  margin-left: 4px;
-  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
   text-align: left;
-  width: 98%;
+  width: 100%;
 }
 .whfortyrp .notes-tab .information {
   display: flex;

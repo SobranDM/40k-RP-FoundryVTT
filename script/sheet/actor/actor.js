@@ -1,4 +1,4 @@
-import {prepareCommonRoll, prepareCombatRoll, preparePsychicPowerRoll} from "../../common/dialog.js";
+import { prepareCommonRoll, prepareCombatRoll, preparePsychicPowerRoll } from "../../common/dialog.js";
 import WHFortyRPUtil from "../../common/util.js";
 
 export class WHFortyRPSheet extends ActorSheet {
@@ -15,6 +15,7 @@ export class WHFortyRPSheet extends ActorSheet {
     html.find(".roll-corruption").click(async ev => await this._prepareRollCorruption(ev));
     html.find(".roll-weapon").click(async ev => await this._prepareRollWeapon(ev));
     html.find(".roll-psychic-power").click(async ev => await this._prepareRollPsychicPower(ev));
+    html.find(".short.summary").click(async event => this._onItemSummary(event));
   }
 
   /** @override */
@@ -188,7 +189,7 @@ export class WHFortyRPSheet extends ActorSheet {
     const div = $(event.currentTarget).parents(".item");
     const weapon = this.actor.items.get(div.data("itemId"));
     await prepareCombatRoll(
-      WHFortyRPUtil.createWeaponRollData(this.actor, weapon), 
+      WHFortyRPUtil.createWeaponRollData(this.actor, weapon),
       this.actor
     );
   }
@@ -196,7 +197,7 @@ export class WHFortyRPSheet extends ActorSheet {
   async _prepareRollPsychicPower(event) {
     event.preventDefault();
     const div = $(event.currentTarget).parents(".item");
-    const psychicPower = this.actor.items.get(div.data("itemId"));    
+    const psychicPower = this.actor.items.get(div.data("itemId"));
     await preparePsychicPowerRoll(
       WHFortyRPUtil.createPsychicRollData(this.actor, psychicPower)
     );
@@ -278,47 +279,67 @@ export class WHFortyRPSheet extends ActorSheet {
   }
 
   constructItemLists() {
-      let items = {}
-      let itemTypes = this.actor.itemTypes;
-      items.mentalDisorders = itemTypes["mentalDisorder"];
-      items.malignancies = itemTypes["malignancy"];
-      items.mutations = itemTypes["mutation"];
-      if (this.actor.type === "npc") {
-          items.abilities = itemTypes["talent"]
-          .concat(itemTypes["trait"])
-          .concat(itemTypes["specialAbility"]);
-      }
-      items.talents = itemTypes["talent"];
-      items.traits = itemTypes["trait"];
-      items.specialAbilities = itemTypes["specialAbility"];
-      items.aptitudes = itemTypes["aptitude"];
+    let items = {}
+    let itemTypes = this.actor.itemTypes;
+    items.mentalDisorders = itemTypes["mentalDisorder"];
+    items.malignancies = itemTypes["malignancy"];
+    items.mutations = itemTypes["mutation"];
+    if (this.actor.type === "npc") {
+      items.abilities = itemTypes["talent"]
+        .concat(itemTypes["trait"])
+        .concat(itemTypes["specialAbility"]);
+    }
+    items.talents = itemTypes["talent"];
+    items.traits = itemTypes["trait"];
+    items.specialAbilities = itemTypes["specialAbility"];
+    items.aptitudes = itemTypes["aptitude"];
 
-      items.psychicPowers = itemTypes["psychicPower"];
+    items.psychicPowers = itemTypes["psychicPower"];
 
-      items.criticalInjuries = itemTypes["criticalInjury"];
+    items.criticalInjuries = itemTypes["criticalInjury"];
 
-      items.gear = itemTypes["gear"];
-      items.drugs = itemTypes["drug"];
-      items.tools = itemTypes["tool"];
-      items.cybernetics = itemTypes["cybernetic"];
+    items.gear = itemTypes["gear"];
+    items.drugs = itemTypes["drug"];
+    items.tools = itemTypes["tool"];
+    items.cybernetics = itemTypes["cybernetic"];
 
-      items.armour = itemTypes["armour"];
-      items.forceFields = itemTypes["forceField"];
+    items.armour = itemTypes["armour"];
+    items.forceFields = itemTypes["forceField"];
 
-      items.weapons = itemTypes["weapon"];
-      items.weaponMods = itemTypes["weaponModification"];
-      items.ammunitions = itemTypes["ammunition"];
-      this._sortItemLists(items)
+    items.weapons = itemTypes["weapon"];
+    items.weaponMods = itemTypes["weaponModification"];
+    items.ammunitions = itemTypes["ammunition"];
+    this._sortItemLists(items)
 
-      return items;
+    return items;
   }
 
-    _sortItemLists(items) {
-        for (let list in items) {
-            if (Array.isArray(items[list]))
-                items[list] = items[list].sort((a, b) => a.sort - b.sort)
-            else if (typeof items[list] == "object")
-                _sortItemLists(items[list])
-        }
+  _sortItemLists(items) {
+    for (let list in items) {
+      if (Array.isArray(items[list]))
+        items[list] = items[list].sort((a, b) => a.sort - b.sort)
+      else if (typeof items[list] == "object")
+        _sortItemLists(items[list])
     }
+  }
+
+  _onItemSummary(event) {
+    event.preventDefault();
+    let li = $(event.currentTarget).parents(".item");
+    let item = this.actor.items.get(li.data("item-id"));
+    let description = item.system.description;
+    // Toggle summary
+    if (li.hasClass("expanded")) {
+      let summary = li.parents(".item").children(".summary");
+      summary.slideUp(200, () => summary.remove());
+    } else {
+      // Add item tags
+      let div = $(
+        `<div class="item-summary"><div>${description}</div></div>`
+      );
+      li.parents(".item").append(div.hide());
+      div.slideDown(200);
+    }
+    li.toggleClass("expanded");
+  }
 }

@@ -38,29 +38,7 @@
         </div>
         <div class="psychic-powers border">
             <h1>{{localize "TITLE.PSYCHIC_POWERS"}}</h1>
-            <div class="header">
-                <div class="class">
-                    <label>{{localize "PSYCHIC_POWER.CLASS"}}</label>
-                    <select name="system.psy.class">
-                        {{#select system.psy.class}}
-                        <option value="bound">{{localize "PSYCHIC_POWER.BOUND"}}</option>
-                        <option value="unbound">{{localize "PSYCHIC_POWER.UNBOUND"}}</option>
-                        <option value="daemonic">{{localize "PSYCHIC_POWER.DAEMONIC"}}</option>
-                        {{/select}}
-                    </select>
-                </div>
-                <div class="rating">
-                    <div class="flex">
-                        <label>{{localize "PSYCHIC_POWER.RATING"}}</label>
-                        <input name="system.psy.rating" type="number" value="{{system.psy.rating}}"
-                            data-dtype="Number" />
-                    </div>
-                    <div class="flex" style="margin-top: 2px">
-                        <label>{{localize "PSYCHIC_POWER.COST"}}</label>
-                        <input name="system.psy.cost" type="number" value="{{system.psy.cost}}" data-dtype="Number" />
-                    </div>
-                </div>
-            </div>
+            
             <div class="item-list">
                 <div class="flex header">
                     <b class="name">{{localize "PSYCHIC_POWER.NAME"}}</b>

@@ -5,8 +5,8 @@ export class CriticalInjurySheet extends WHFortyRPItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["whfortyrp", "sheet", "critical-injury"],
       template: "systems/whfortyrp/template/sheet/critical-injury.html",
-      width: 500,
-      height: 369,
+      width: 550,
+      height: 605,
       resizable: false,
       tabs: [
         {

@@ -6,7 +6,7 @@ export class PsychicPowerSheet extends WHFortyRPItemSheet {
       classes: ["whfortyrp", "sheet", "psychic-power"],
       template: "systems/whfortyrp/template/sheet/psychic-power.html",
       width: 500,
-      height: 397,
+      height: 605,
       resizable: false,
       tabs: [
         {

@@ -5,8 +5,8 @@ export class MentalDisorderSheet extends WHFortyRPItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["whfortyrp", "sheet", "mental-disorder"],
       template: "systems/whfortyrp/template/sheet/mental-disorder.html",
-      width: 500,
-      height: 369,
+      width: 550,
+      height: 605,
       resizable: false,
       tabs: [
         {

@@ -5,8 +5,8 @@ export class MutationSheet extends WHFortyRPItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["whfortyrp", "sheet", "mutation"],
       template: "systems/whfortyrp/template/sheet/mutation.html",
-      width: 500,
-      height: 369,
+      width: 550,
+      height: 605,
       resizable: false,
       tabs: [
         {

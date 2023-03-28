@@ -8,7 +8,7 @@ import { commonRoll, combatRoll } from "./roll.js";
  *
  * @returns {Array}              The extended options Array including new context choices
  */
-export const addChatMessageContextOptions = function (html, options) {
+export const addChatMessageContextOptions = function(html, options) {
   let canApply = li => {
     const message = game.messages.get(li.data("messageId"));
     return message.getRollData()?.isCombatTest && message.isContentVisible && canvas.tokens.controlled.length;
@@ -38,7 +38,7 @@ export const addChatMessageContextOptions = function (html, options) {
         rerollTest(message.getRollData());
       }
     }
-  )
+  );
   return options;
 };
 
@@ -77,15 +77,20 @@ function applyChatCardDamage(roll, multiplier) {
   }));
 }
 
+/**
+ * Rerolls previous roll, provided the actor has infamy.
+ * @param {object} rollData
+ * @returns {object} new roll
+ */
 function rerollTest(rollData) {
   let actor = game.actors.get(rollData.ownerId);
-  actor.update({ "system.fate.value": actor.fate.value - 1 });
-  delete rollData.damages; //reset so no old data is shown on failure
+  actor.update({ "system.infamy.value": actor.infamy.value - 1 });
+  delete rollData.damages; // Reset so no old data is shown on failure
 
   rollData.isReRoll = true;
   if (rollData.isCombatTest) {
-    //All the regexes in this are broken once retrieved from the chatmessage
-    //No idea why this happens so we need to fetch them again so the roll works correctly
+    // All the regexes in this are broken once retrieved from the chatmessage
+    // No idea why this happens so we need to fetch them again so the roll works correctly
     rollData.attributeBoni = actor.attributeBoni;
     return combatRoll(rollData);
   } else {

@@ -5,8 +5,8 @@ export class SpecialAbilitySheet extends WHFortyRPItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["whfortyrp", "sheet", "special-ability"],
       template: "systems/whfortyrp/template/sheet/special-ability.html",
-      width: 500,
-      height: 369,
+      width: 550,
+      height: 605,
       resizable: false,
       tabs: [
         {

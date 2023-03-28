@@ -5,8 +5,8 @@ export class TalentSheet extends WHFortyRPItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["whfortyrp", "sheet", "talent"],
       template: "systems/whfortyrp/template/sheet/talent.html",
-      width: 500,
-      height: 369,
+      width: 550,
+      height: 605,
       resizable: false,
       tabs: [
         {

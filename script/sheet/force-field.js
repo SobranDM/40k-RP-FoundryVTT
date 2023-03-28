@@ -5,8 +5,8 @@ export class ForceFieldSheet extends WHFortyRPItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["whfortyrp", "sheet", "force-field"],
       template: "systems/whfortyrp/template/sheet/force-field.html",
-      width: 500,
-      height: 369,
+      width: 550,
+      height: 605,
       resizable: false,
       tabs: [
         {

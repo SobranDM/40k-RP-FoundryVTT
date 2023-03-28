@@ -5,8 +5,8 @@ export class MalignancySheet extends WHFortyRPItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["whfortyrp", "sheet", "malignancy"],
       template: "systems/whfortyrp/template/sheet/malignancy.html",
-      width: 500,
-      height: 369,
+      width: 550,
+      height: 605,
       resizable: false,
       tabs: [
         {
